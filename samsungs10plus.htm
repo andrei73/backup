@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-locale="US">
+<head>
+<script>
+if(window&&!("Promise"in window)){var xhr=new XMLHttpRequest;xhr.open("GET",'/media/shared/js/promise.js',false);xhr.onerror=function(){console.log(xhr.statusText)};xhr.send("");eval(xhr.responseText);}
+</script> <script>window.usingBordeauxAds = true</script>
+<!-- Consent Manager Tag : Stubbed (minified) (updated 2018-04-27T17:00) -->
+<script type="text/javascript">
+/*! CMP 2.18.0 Copyright 2018 Oath Holdings, Inc. */
+!function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:r})},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="/",n(n.s=2)}({2:function(e,t){!function(){var e=!1;function t(e){var t="string"==typeof e.data,n=e.data;if(t)try{n=JSON.parse(e.data)}catch(e){}if(n&&n.__cmpCall){var r=n.__cmpCall;window.__cmp(r.command,r.parameter,function(n,o){var a={__cmpReturn:{returnValue:n,success:o,callId:r.callId}};e&&e.source&&e.source.postMessage(t?JSON.stringify(a):a,"*")})}}"function"==typeof __cmp||(window.__cmp=function(){var t=arguments;if(__cmp.a=__cmp.a||[],!t.length)return __cmp.a;"ping"===t[0]?t[2]({gdprAppliesGlobally:e,cmpLoaded:!1},!0):__cmp.a.push([].slice.apply(t))},function e(){if(document.body&&document.body.firstChild){var t=document.body,n=document.createElement("iframe");n.style.display="none",n.height=n.width=0,n.name="__cmpLocator",t.insertBefore(n,t.firstChild)}else setTimeout(e,5)}(),window.addEventListener?window.addEventListener("message",t,!1):window.attachEvent("onmessage",t))}()}});
+</script>
+<!-- End Consent Manager Tag : Stubbed (minified) -->
+<script>
+window.askForConsent = true;
+window.waitForConsent = true;
+window.indexExchangeEnabled = true;
+window.amazonA9Enabled = true;
+window.rampS2SEnabled = null;
+window.iasOptimiseEnabled = true;
+window.bluekaiEnabled = true;
+window.cmpConfig = {"gdprAppliesGlobally":false,"uiUrl":"https:\/\/consent.cmp.techradar.com\/cmpui.html"};
+/*! begin dom-promises (v2.11.1) */
+'use strict';(function(){function v(){m||(m=!0,w.forEach(n))}function x(){p||(p=!0,y.forEach(n))}function z(){q||(q=!0,A.forEach(n))}function l(){return r&&r.now&&r.now()||0}function n(a){return a()}function D(a){"cmp_request_translation_data"===a.data&&Promise.resolve(window.reliablePageLoad).then(function(){var a=window.__translator.trans;a={tag:"cmp_translations_data",main:{heading:a("cmp_main_heading"),description:a("cmp_main_description"),btnAccept:a("cmp_main_btn_accept"),btnMoreInfo:a("cmp_main_btn_moreinfo")},
+confirm:{heading:a("cmp_confirm_heading"),description:a("cmp_confirm_description"),btnGoBack:a("cmp_confirm_btn_goback"),btnLeave:a("cmp_confirm_btn_leave")},purposes:{heading:a("cmp_purposes_heading"),description:a("cmp_purposes_description"),btnAcceptAll:a("cmp_purposes_btn_acceptall"),btnRejectAll:a("cmp_purposes_btn_rejectall"),btnSave:a("cmp_purposes_btn_save"),btnAndContinue:a("cmp_purposes_btn_andcontinue"),btnAndContinueShort:a("cmp_purposes_btn_andcontinueshort"),list:{1:a("cmp_purposes_list_1"),
+"1_description":a("cmp_purposes_list_1_description"),2:a("cmp_purposes_list_2"),"2_description":a("cmp_purposes_list_2_description"),3:a("cmp_purposes_list_3"),"3_description":a("cmp_purposes_list_3_description"),4:a("cmp_purposes_list_4"),"4_description":a("cmp_purposes_list_4_description"),5:a("cmp_purposes_list_5"),"5_description":a("cmp_purposes_list_5_description")}},vendors:{heading:a("cmp_vendors_heading"),description:a("cmp_vendors_description"),btnAcceptAll:a("cmp_vendors_btn_acceptall"),
+btnRejectAll:a("cmp_vendors_btn_rejectall"),btnSave:a("cmp_vendors_btn_save"),btnBack:a("cmp_vendors_btn_back"),privacyPolicy:a("cmp_vendors_privacy_policy")}};document.getElementById("cmp-ui-iframe").contentWindow.postMessage(a,"*")});"cmp_request_ffte_data"===a.data&&Promise.resolve(window.reliablePageLoad).then(function(){var a={tag:"cmp_ffte_data",ffte:window.ffte||{}};document.getElementById("cmp-ui-iframe").contentWindow.postMessage(a,"*")})}function E(a,c,b){a.performance&&a.performance.timing&&
+Date.now();a.__cmp("init",a.cmpConfig);a.__cmp("getVendorConsents",null,function(g,d){d?(c({askedForConsent:!0,consent:g}),a.reliablePageLoad.then(function(){if(g.gdprApplies&&.33>Math.random()){var b=g.vendorConsents,d=Object.keys(b),c=d.length;d=d.map(function(a){return b[a]}).filter(Boolean).length;a.ga&&a.ga("send","event","CMP","getVendorConsents",0===c?"n/a":0===d?"none":d===c?"all":"some",d,{nonInteraction:!0,dimension123:d})}})):b(Error("Failed to get vendor consents"))})}function F(a,c,b){function g(a,
+b){return null===b||void 0===b?a:b}JSON.parse(g("true",h("mock_consent_success")(a)))?(b=parseInt(h("mock_consent_timeout")(a),10),a={askedForConsent:!0,consent:{gdprApplies:JSON.parse(g("true",h("mock_gdpr_applies")(a))),hasGlobalScope:JSON.parse(g("false",h("mock_has_global_scope")(a))),metadata:"AAAAAAA",purposeConsents:JSON.parse(g(JSON.stringify({1:!0,2:!0,3:!0,4:!0,5:!0}),h("mock_purpose_consents")(a))),vendorConsents:JSON.parse(g("{}",h("mock_vendor_consents")(a)))}},isNaN(b)?c(a):setTimeout(c,
+b,a)):b(Error("Failed to get vendor consents"))}function t(a){return function(c){return 0<=c.location.search.indexOf(a)}}function h(a){return function(c){return B(a,c.location.search)}}function B(a,c,b){b=void 0===b?"\x26":b;if(""===a)return!1;a=c.indexOf(a+"\x3d");return 0<=a?(a=c.indexOf("\x3d",a),b=c.indexOf(b,a+1),0<=b?c.substring(a+1,b):c.substring(a+1)):!1}function G(a){return a.split("").map(function(a){return H(I.call(a,0)-1)}).join("")}var f=String,H=f.fromCharCode,I=f.prototype.charCodeAt,
+e=window,C=e.document,r=e.performance;f=e.Promise;var u=l();e.resolveFEP=null;e.processFEP=f?new f(function(a){e.resolveFEP=a}):{then:function(){}};var k=!(-1<window.location.href.indexOf("disable_dom_promise_timeouts")),q=!1,A=[];k&&setTimeout(z,5E3);C.addEventListener("DOMContentLoaded",z);e.reliableDOMContentLoaded=f?new f(function(a){k&&setTimeout(a,5E3);C.addEventListener("DOMContentLoaded",a)}):{then:function(a){q?a():A.push(a)}};e.reliableDOMContentLoaded.then(function(){console.log("::DOMContentLoaded at",
+l()-u|0)});var p=!1,y=[];k&&setTimeout(x,7E3);e.addEventListener("load",x);e.reliablePageLoad=f?new f(function(a){k&&setTimeout(a,7E3);e.addEventListener("load",a)}):{then:function(a){p?a():y.push(a);return e.reliablePageLoad},catch:function(){return e.reliablePageLoad}};e.reliablePageLoad.then(function(){console.log("::PageLoad at",l()-u|0)});var m=!1,w=[];k&&setTimeout(v,1E4);e.resolveBordeauxDone=v;e.bordeauxDone=f?new f(function(a){k&&setTimeout(a,1E4);e.resolveBordeauxDone=a}):{then:function(a){m?
+a():w.push(a)}};e.bordeauxDone.then(function(){console.log("::BordeauxDone at",l()-u|0)});(function(a){var c=a.Promise;a.addEventListener("message",D,!1);a.reliableConsentGiven=c?c.resolve(a.reliableDOMContentLoaded).then(function(){return new c(function(b,c){t("force_clear_consent")(a)&&(document.cookie="EuConsent\x3d; path\x3d/; Max-Age\x3d0",document.cookie="cmp\x3d; path\x3d/; Max-Age\x3d0",document.cookie="TestingHideEUConsent\x3d; path\x3d/; Max-Age\x3d0");t("force_hide_consent")(a)&&(document.cookie=
+"TestingHideEUConsent\x3dtrue;");var d=t("mock_consent")(a);"true"===B("TestingHideEUConsent",document.cookie,";")?b({askedForConsent:!1}):d?F(a,b,c):a.askForConsent?E(a,b,c):b({askedForConsent:!1})})}):{then:function(){}};a.reliableConsentGiven.then(function(b){b.askedForConsent&&b.consent.gdprApplies&&a.reliablePageLoad.then(function(){var b=a.document.querySelector("#document-footer-content \x3e nav \x3e ul");if(b){var d=a.document.createElement("a");d.addEventListener("click",function(){a.__cmp("renderConsents",
+function(){})});d.href="#";d.textContent=a.__translator.trans("cmp_footer_link");var c=a.document.createElement("li");c.appendChild(d);b.appendChild(c)}if(b=a.document.querySelector("ul.footer__listcontainer"))d=a.document.createElement("a"),d.className="footer__link",d.addEventListener("click",function(){a.__cmp("renderConsents",function(){})}),d.href="#",d.textContent=a.__translator.trans("cmp_footer_link"),c=a.document.createElement("li"),c.className="footer__list-item",c.appendChild(d),b.appendChild(c);
+if(b=a.document.querySelector("#gawker-contact-block ul"))d=a.document.createElement("a"),d.className="is-reversed",d.addEventListener("click",function(){a.__cmp("renderConsents",function(){})}),d.href="#",d.textContent=a.__translator.trans("cmp_footer_link"),c=a.document.createElement("li"),c.appendChild(d),b.appendChild(c)})})})(e);(function(){var a=window,c=a.document,b=a.Promise;a.wadoinawdoijzxioznelknsdf=b?new b(function(a){var b=parseInt(h("mock_tiberius")(window),10);isNaN(b)||setTimeout(a,
+b,!0);c.addEventListener(G("tq/cmpdljoh"),function(){a(!0)})}):{then:function(){}}})()})();
+/*! end dom-promises (v2.11.1) */</script>
+<script>
+window.hawk_css_endpoint = "https://widgets.hawk-assets.co.uk";
+</script>
+<script id="hawk-script" async src="https://widgets.hawk-assets.co.uk/js/w/trd.js"></script>
+<script>
+window.adParameters = {
+site: 'techradar',
+content: 'unknown',
+type: 'review',
+};
+</script>
+<script>window.gaCookieSet=/(?:^|;\\s*)_ga/.test(document.cookie);</script>
+<script>window.vanilla = window.vanilla || {}</script>
+<script>'use strict';(function(){function g(c,a){return function(){return setTimeout(c,a)}}function h(c,a,b){b=void 0===b?function(){}:b;return function(){var d=c.createElement("script"),e=c.getElementsByTagName("script")[0],f=k({},a,{async:1});Object.keys(f).forEach(function(a){return d.setAttribute(a,f[a])});e.parentNode.insertBefore(d,e);b()}}var k=Object.assign||function(c){for(var a=1;a<arguments.length;a++){var b=arguments[a],d;for(d in b)Object.prototype.hasOwnProperty.call(b,d)&&(c[d]=b[d])}return c};
+window.vanilla.addJs=function(c,a,b,d){b=void 0===b?!1:b;c=h(document,c,d);a=null!==a?g(c,a):c;b?window.reliablePageLoad.then(a):a()}})();</script>
+<script>'use strict';(function(){function f(a,d){return function(){var c=a.createElement("link"),b=g({},d,{rel:"stylesheet",type:"text/css"});Object.keys(b).forEach(function(a){return c.setAttribute(a,b[a])});var e=a.getElementsByTagName("head")[0];e.parentNode.insertBefore(c,e)}}var g=Object.assign||function(a){for(var d=1;d<arguments.length;d++){var c=arguments[d],b;for(b in c)Object.prototype.hasOwnProperty.call(c,b)&&(a[b]=c[b])}return a},h=window.requestAnimationFrame||window.webkitRequestAnimationFrame||
+window.mozRequestAnimationFrame||window.msRequestAnimationFrame||function(a){return window.reliablePageLoad.then(a)};window.vanilla.addCss=function(a){return h(f(document,a))}})();</script>
+<link rel="alternate" hreflang="x-default" href="https://www.techradar.com/reviews/samsung-galaxy-s10-plus">
+<link rel="alternate" hreflang="en-GB" href="https://www.techradar.com/uk/reviews/samsung-galaxy-s10-plus">
+<link rel="alternate" hreflang="en-US" href="https://www.techradar.com/reviews/samsung-galaxy-s10-plus">
+<link rel="alternate" hreflang="en-CA" href="https://www.techradar.com/reviews/samsung-galaxy-s10-plus">
+<link rel="alternate" hreflang="en-AU" href="https://www.techradar.com/au/reviews/samsung-galaxy-s10-plus">
+<link rel="alternate" hreflang="en-NZ" href="https://www.techradar.com/au/reviews/samsung-galaxy-s10-plus">
+<link rel="alternate" hreflang="en-SG" href="https://www.techradar.com/sg/reviews/samsung-galaxy-s10-plus">
+<link rel="alternate" hreflang="en-MY" href="https://www.techradar.com/sg/reviews/samsung-galaxy-s10-plus">
+<link rel="alternate" hreflang="en-IN" href="https://www.techradar.com/in/reviews/samsung-galaxy-s10-plus-india">
+<link rel="alternate" hreflang="en-AE" href="https://www.techradar.com/reviews/samsung-galaxy-s10-plus-uae">
+<link rel="alternate" hreflang="da-DK" href="https://global.techradar.com/da-dk/reviews/anmeldelse-samsung-galaxy-s10-plus">
+<link rel="alternate" hreflang="fi-FI" href="https://global.techradar.com/fi-fi/reviews/arvostelussa-samsung-galaxy-s10-plus">
+<link rel="alternate" hreflang="no-NO" href="https://global.techradar.com/no-no/reviews/test-samsung-galaxy-s10-plus">
+<link rel="alternate" hreflang="sv-SE" href="https://global.techradar.com/sv-se/reviews/samsung-galaxy-s10-plus-recension">
+<link rel="alternate" hreflang="it-IT" href="https://global.techradar.com/it-it/reviews/samsung-galaxy-s10-plus-recensione">
+<link rel="alternate" hreflang="nl-NL" href="https://global.techradar.com/nl-nl/reviews/samsung-galaxy-s10-plus-test">
+<script>
+function handleHeaderError() {
+if (window.amIIE && !window.amIIE()) {
+window.wadoinawdoijzxioznelknsdf.then(function () {
+window._sp_ = window._sp_ || {};
+window._sp_.config = window._sp_.config || {};
+if (window._sp_.bootstrap && !window.headerExecuted) {
+window._sp_.bootstrap('//vanilla.futurecdn.net/techradar/128169/media/js/header/header.js');
+}
+})
+}
+}
+</script>
+<script defer src="//vanilla.futurecdn.net/techradar/128169/media/js/header/header.js" onerror="handleHeaderError()" crossorigin="anonymous"></script>
+<!-- tag factory //-->
+<meta charset="utf-8">
+<link rel="dns-prefetch" href="//pubads.g.doubleclick.net">
+<link rel="dns-prefetch" href="//cdn0.static.techradar.futurecdn.net">
+<link rel="dns-prefetch" href="//cdn.mos.cms.futurecdn.net">
+<link rel="dns-prefetch" href="//widgets.future-fie-assets.co.uk">
+<meta data-static-host="//vanilla.futurecdn.net/techradar/128169" id="static-host-pattern">
+<script async="1" src="https://consent.cmp.oath.com/cmp3p.js"></script>
+<meta id="gpt-api-script-location" data-src="//www.googletagservices.com/tag/js/gpt.js">
+<meta id="index-exchange-script-location" data-src="//js-sec.indexww.com/ht/p/184056-184008355455774.js">
+<meta id="amazon-a9-script-location" data-src="//c.amazon-adsystem.com/aax2/apstag.js">
+<meta id="ias-optimise-script-location" data-src="//cdn.adsafeprotected.com/iasPET.1.js">
+<meta id="bluekai-script-location" data-src="//tags.bkrtx.com/js/bk-coretag.js">
+<script>
+var vanFontLoader=function(e){if("undefined"==typeof e||"object"!=typeof e)return!1;var t=document.getElementsByTagName("head")[0],n=function(e,n){var o=document.createElement("style");o.type="text/css","undefined"!=typeof n&&(o.id=n,o.classList.add("font-style")),o.styleSheet?o.styleSheet.cssText=e:o.appendChild(document.createTextNode(e)),t.appendChild(o)},o=function(){"undefined"!=typeof e.hideKey&&n(e.hideKey+"{visibility:visible}")};if("undefined"!=typeof e.hideKey&&n(e.hideKey+"{visibility:hidden}"),"undefined"!=typeof e.fontKey&&"undefined"!=typeof e.staticHost&&"undefined"!=typeof e.version&&"undefined"!=typeof e.woff2Version){var i=e.fontKey,a=e.version,f=e.woff2Version,r=e.staticHost,d="woff",s=!1;f&&(s=function(e){if(!("FontFace"in e))return!1;var t=new e.FontFace("t",'url( "data:application/font-woff2," ) format( "woff2" )',{});try{var n=t.load();"undefined"!=typeof n.then&&n.then(function(){},function(){})}catch(o){return!1}return"loading"==t.status}(window)),s?d="woff2":navigator.userAgent.indexOf("Android")>-1&&(d="ttf");var c="vanFont-"+i+"-"+d,u=c+".json",y=function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+r+"/"+a+"/media/fonts/json/"+u,t.appendChild(e)},l=!1,v=!1;try{if(l=localStorage.getItem(c)){var v=JSON.parse(l);v.version!=a&&(localStorage.removeItem(c),v=!1)}}catch(p){console.error("Error when parsing font in vanFontLoader",p)}v&&"undefined"!=typeof v.value?(n(v.value,i),o()):y()}this.store=function(e){e.version=a;var t=JSON.stringify(e);localStorage.setItem(c,t),n(e.value),o()}}; try {
+var OpenSans_vanFontLoader = new vanFontLoader({fontKey: 'OpenSans', version: 1, woff2Version: true, staticHost: 'vanilla.futurecdn.net/techradar' });
+var techradar_vanFontLoader = new vanFontLoader({fontKey: 'techradar', version: 15, woff2Version: false, staticHost: 'vanilla.futurecdn.net/techradar' ,hideKey: '.icon' });
+} catch(e) {
+console.warn('Failed to load fonts: '+ e.message);
+}
+</script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta content="" name="news_keywords">
+<title>Samsung Galaxy S10 Plus review | TechRadar</title>
+<meta name="pub_date" content="2019-08-08T16:25:30+00:00">
+<meta name="description" content="The Samsung Galaxy S10 Plus is the best of its siblings, and a serious contender for phone of the year">
+<link rel="canonical" href="https://www.techradar.com/reviews/samsung-galaxy-s10-plus">
+<style id="critical-styles">.newsletter-signup,.mag-banner-wrap,.popular-box{display:none;}@charset "UTF-8";html,body,div,span,iframe,h1,h2,h3,h4,p,a,abbr,img,small,strong,i,ol,ul,li,form{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}label{padding:0;border:0;font:inherit;font-size:100%}label,table,tbody,thead,tr{vertical-align:baseline}table,tbody,thead,tr,th,td{margin:0;padding:0;border:0;font:inherit;font-size:100%}article,aside,figure,figcaption,footer,header,hgroup,nav,section,time{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}th,td{text-align:left;font-weight:400;vertical-align:middle}a img{border:none}article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}.container{margin:auto}.container:after{content:"";display:table;clear:both}.container.full{clear:both;max-width:100%}@media screen and (min-width:1000px){.container.full{max-width:970px}}@media screen and (min-width:1574px){.container.full{max-width:1200px}body.limit-width .container.full{max-width:970px}}#main{background:#fff}#sidebar{width:100%}@media screen and (min-width:1000px){#sidebar{width:300px;margin-top:.875em}}@media only screen and (min-width:700px){html{font-size:100%}}html{font-family:"Open Sans",sans-serif;color:#333}h1,h2,h3,h4{font-weight:700}.block-links a{display:block;position:relative;color:#333;background:#ddd;line-height:22px;padding:11px 12px;margin:0 12px 12px 0;text-align:center;font-size:14px;font-weight:600;text-transform:uppercase}.block-links a:hover{color:#333;text-decoration:none;background:#666}.block-links a:visited{color:#333;text-decoration:none}.separator-heading{border-top:1px solid #ccc;border-bottom:1px solid #ccc}.no-wrap{white-space:nowrap}.review-article header h1{font-weight:600;font-size:24px;line-height:30px;margin-bottom:.25rem}@media (min-width:700px){.review-article header h1{margin-bottom:.5rem;font-size:28px;line-height:34px}}@media (min-width:1574px){.review-article header h1{margin-bottom:.75rem;font-size:34px;line-height:42px}body.limit-width .review-article header h1{margin-bottom:.5rem;font-size:28px;line-height:34px}}.review-article header h2{font-size:18px;line-height:26px;font-weight:300}@media (min-width:1000px){.review-article header h2{font-size:20px;line-height:28px}}@media (min-width:1574px){.review-article header h2{font-size:24px;line-height:30px}body.limit-width .review-article header h2{font-size:20px;line-height:28px}}@media (min-width:900px){.review-article .byline{margin-bottom:10px}}.review-article .byline .no-wrap{display:inline-block;zoom:1;*display:inline;line-height:23px}@media (min-width:900px){.review-article header h2{width:auto;margin-right:300px}}.no-select{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none}.hidden{visibility:hidden}.fallback{display:none}.icon:before,.rating:before,.pagination.internal.current-prev-next .next .direction:before,.pagination.internal.current-prev-next .next .direction:after,.pagination.internal label:after,.pagination.internal input[type=checkbox].hidden:checked~label:after{font-family:"techradar",arial;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;text-transform:none}.icon-amazon:before{content:"\f107"}.icon-arrow-down:before{content:"\f109"}.icon-arrow-left:before{content:"\f10a"}.icon-arrow-right:before,.pagination.internal.current-prev-next .next .direction:after{content:"\f10b"}.pagination.internal label:after{content:"\f11b"}.pagination.internal input[type=checkbox].hidden:checked~label:after{content:"\f11e"}.icon-envelope-solid:before{content:"\f120"}.icon-envelope:before{content:"\f121"}.icon-facebook:before{content:"\f123"}.icon-filled-envelope:before{content:"\f124"}.icon-home:before{content:"\f128"}.icon-pinterest:before{content:"\f12e"}.icon-search:before{content:"\f131"}.icon-share:before{content:"\f132"}.icon-star:before{content:"\f134"}.rating:before{content:"\f135"}.icon-twitter:before{content:"\f138"}.icon-whats-app:before{content:"\f13a"}.icon-youtube:before{content:"\f13b"}.icon-circle,.pagination.internal.current-prev-next .next .direction:before,.pagination.internal.current-prev-next .next .direction:after{border-radius:50%;display:block}ul.inline li{float:left}.review-article{position:relative}.review-article .text-copy{clear:both;position:relative;word-break:break-word;margin-bottom:40px}.review-article .text-copy p,.review-article .text-copy img{width:100%;height:auto}.review-article .text-copy img.lft{width:auto}.review-article .text-copy figcaption{margin-top:-10px}.review-article .text-copy figure{margin-bottom:1em}.review-article .text-copy strong{font-weight:600}.review-article .text-copy p{font-size:16px;line-height:1.5;margin-bottom:1em}.review-article .text-copy figcaption{font-size:13px;line-height:16px;color:#666}.review-article .text-copy>*:last-child{margin-bottom:0}@media (min-width:1000px){.review-article{float:left;max-width:650px}}@media (min-width:1574px){.review-article{max-width:832px}body.limit-width .review-article{max-width:650px}}.review-article header .byline{clear:both;line-height:23px;font-size:13px}@media (min-width:1000px){.review-article header .byline{margin-bottom:.5rem}}@media (min-width:1574px){.review-article header .byline{margin-bottom:.75rem}}.review-article header .byline .rating{float:left}.review-article header .byline .chunk{margin-right:1ex}.review-article header,.review-article section{margin-left:20px;margin-right:20px}@media (min-width:1000px){.review-article header,.review-article section{margin-left:1.5em;margin-right:1.5em}}@media (min-width:1574px){.review-article header,.review-article section{margin-left:125px;margin-right:70px}body.limit-width .review-article header,body.limit-width .review-article section{margin-left:1.5em;margin-right:1.5em}}.review-article header,.review-article section{overflow:visible}.review-article{width:100%}@media screen and (min-width:1000px){.review-article{width:970px}}@media screen and (min-width:900px){.review-article{max-width:100%;float:none}}.review-article header{position:relative}@media (min-width:700px){.review-article header{overflow:hidden;*zoom:1;margin-bottom:20px}}@media screen and (min-width:1574px){body.limit-width .review-article{max-width:100%}}.review-article header{margin-top:16px}@media screen and (min-width:900px){.review-article header{margin-bottom:5px}}@media screen and (min-width:575px){.review-article header{margin-top:30px}}.review-article header .header-sub-container{padding-top:27px}@media screen and (min-width:575px){.review-article header .header-sub-container{padding-top:0}}body.limit-width .review-article header h1{font-size:30px;line-height:38px;letter-spacing:-1px}@media screen and (min-width:575px){body.limit-width .review-article header h1{font-size:35px;line-height:43px}}.review-article header h2{margin-right:0;margin-bottom:4px}@media screen and (min-width:575px){.review-article header h2{margin-bottom:.625rem}}.review-article header .byline{margin-bottom:.8rem}@media screen and (min-width:575px){.review-article header .byline{margin-bottom:1.25rem}}.review-article header .byline .relative-date{display:block;margin:4px 0 0}@media screen and (min-width:575px){.review-article header .byline .relative-date{display:inline;margin:0 1ex 0 4px}}.review-article header .move-on-reviews{position:absolute;top:0;left:0}@media screen and (min-width:575px){.review-article header .move-on-reviews{position:relative}}.review-article header .move-on-reviews .icon{display:none}@media screen and (min-width:575px){.review-article header .move-on-reviews .icon{display:inline}}.review-article .verdict{margin-top:0!important;position:relative;width:100vw;left:-20px}.review-article .pro-con{margin-top:-30px;position:relative;width:100vw;left:-20px}@media (min-width:575px){.review-article .verdict,.review-article .pro-con{position:static;width:100%;left:auto}}@media (min-width:1000px){#content-after-image{width:645px;float:left}}.boxout-1{display:none}.rating{position:relative;display:block}.rating:before{color:#ededed;display:block;line-height:inherit}.rating:before,.rating .icon-star{height:inherit;background:#fff;font-size:17.5px}.rating .icon-star{position:absolute;color:#e6248a;left:0;top:0}.rating .icon-star.half{width:8.75px;overflow:hidden}.rating .icon-star.half:before{width:8.75px;overflow:hidden}.rating .icon-star:before{display:block;line-height:inherit}.rating .icon-star:nth-child(5){left:74.43038px}.rating .icon-star:nth-child(4){left:55.82278px}.rating .icon-star:nth-child(3){left:37.21519px}.rating .icon-star:nth-child(2){left:18.60759px}.review-article .rating{width:94px}.jwplayer.jw-reset{margin-bottom:20px}figure{position:relative}figure p.bordeaux-image-check{margin-bottom:0}figure img{top:0;left:0}.center-cropped{width:-webkit-calc(100% - 40px);width:calc(100% - 40px);margin:0 25px 25px;overflow:hidden;position:relative}@media (max-width:574px){.center-cropped{width:100%;margin:0 0 25px;max-height:287.5px;height:56.25vw;padding-top:0}}@media (min-width:575px){.center-cropped{max-height:400px;height:50vw;padding-top:0;margin:0 20px 25px}}@media (min-width:1000px){.center-cropped{height:40vw;padding-top:0;width:-webkit-calc(100% - 50px);width:calc(100% - 50px);margin:25px 25px 30px}}.review-article .center-cropped{margin-top:0}img.lft{float:left;margin:0 20px 10px 0;width:auto}.dfp-leaderboard-container{margin:auto;max-width:970px;height:auto}.dfp-leaderboard-container:empty{display:none}@media screen and (min-width:850px){html[data-locale=GB] .burgerbar .icon-amazon{display:block}}#burgerbar-none{display:none}#burgerbar{background:#2f6e91}#burgerbar,#burgerbar~.burgerbar .button-menu.checked{display:none}@media only screen and (max-width:699px){#burgerbar:checked~.burgerbar .button-menu.unchecked{display:none}#burgerbar:checked~.burgerbar .button-menu.checked,#burgerbar:checked~.wrapper .menuitems{display:block}}.button-search{position:absolute;top:0;right:0;min-width:60px;height:60px;margin-bottom:0;line-height:60px}@media only screen and (min-width:700px){.button-search{position:relative}}*:checked+.button-search{background-color:#315062}.search-box{z-index:1000001;position:absolute;right:0;top:60px;width:100%;border:2px solid #315062;-webkit-box-sizing:border-box;box-sizing:border-box;background-color:#fff;padding:1em 18px;font-size:16px;display:none;line-height:44px}.search-box .search-submit{position:absolute;right:18px;top:16px;width:44px;height:44px;background-color:#333;color:#fff;border:none;padding:0}.search-box .search-submit .icon:before{font-size:20px}*:checked~.search-box{display:block}.burgerbar .burgerbar-small .search-box{width:100%}@media screen and (min-width:575px){.burgerbar .burgerbar-small .search-box{width:480px}}.search-checkbox{display:none}.masthead-item{width:auto;text-align:center;font-size:0}@media only screen and (min-width:700px){.masthead-item{padding-right:1rem;padding-left:1rem;position:relative;height:100%;float:right}}.burgerbar{background-color:#2f6e91;color:#fff;font-size:24px;line-height:60px;max-height:60px;height:60px}.pro .burgerbar{background-color:#8c2b5e}@media only screen and (min-width:700px){.burgerbar{border-bottom:1px solid #2f6e91}.pro .burgerbar{border-bottom:1px solid #8c2b5e}}.burgerbar .other-links{display:none}@media only screen and (min-width:700px){.burgerbar .other-links{display:block;float:right;clear:none;margin-right:10px;height:24px;line-height:24px;margin-top:18px;font-size:14px}.burgerbar .other-links a{float:left;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff}.burgerbar .other-links a:visited{color:#fff}}.burgerbar .buttons-social{display:none}@media only screen and (min-width:700px){.burgerbar .buttons-social{display:block}.burgerbar .buttons-social a{float:left;border:1px solid #fff;width:24px;height:24px;margin-top:18px;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;margin-right:10px}.burgerbar .buttons-social a:visited{color:#fff}.burgerbar .buttons-social a:before{font-size:12px;line-height:22px;-webkit-box-sizing:border-box;box-sizing:border-box;float:left;width:22px;text-align:center}}.burgerbar .buttons-social .icon-amazon,.burgerbar .buttons-social .icon-youtube{display:none}@media screen and (min-width:850px){.burgerbar .buttons-social .icon-youtube{display:block}}.burgerbar .logo .site-logo{vertical-align:middle;line-height:25px;height:27px;display:inline-block}.pro .burgerbar .logo .site-logo{line-height:16px}.pro .burgerbar .logo .site-logo:after{bottom:-1px}.burgerbar .logo .site-logo:after{position:absolute;content:'';text-transform:uppercase;font-size:9.11px;bottom:-4px;left:3px;line-height:0}@media only screen and (max-width:360px){.pro .burgerbar .logo svg{width:185px}.pro .burgerbar .logo svg path{-webkit-transform:scale(.93);-ms-transform:scale(.93);transform:scale(.93)}}.burgerbar .logo h1,.burgerbar .logo .hidden-header{display:none}.burgerbar .logo .strapline{font-size:13px;font-weight:400;text-transform:uppercase;float:right;line-height:13px;margin-top:31px;margin-left:13px}@media only screen and (max-width:699px){.burgerbar .logo{text-align:center;margin:auto}.burgerbar .logo .strapline{display:none}}.burgerbar .logo a{color:#fff}.burgerbar .logo a:hover{color:#fff;text-decoration:none}.burgerbar .logo a:visited{color:#fff}.burgerbar .logo a:visited:hover{color:#fff}.burgerbar .button-menu{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none;position:absolute;left:0;width:60px}.burgerbar .burgerbar-small{width:100%;max-height:60px;height:60px}@media only screen and (min-width:700px){.burgerbar .burgerbar-small{position:relative}.burgerbar .burgerbar-small>.button-menu{display:none}.burgerbar .burgerbar-small .logo{padding:0 16px;position:absolute}}.burgerbar .site-logo{position:relative}.burgerbar .fill{height:100%}@media only screen and (max-width:699px){.burgerbar .fill{width:100%}}@media only screen and (min-width:700px){.burgerbar .fill{padding:0 16px}}.trending-wrapper{margin:30px 24px 0;display:block;font-weight:600}.trending-wrapper .trending-bar{overflow:hidden;*zoom:1;display:block;background-color:transparent;position:relative;clear:both;white-space:nowrap;width:100%;height:40px;font-size:14px;background:#ededed}.trending-wrapper .trending-items{overflow:hidden;height:100%;display:inline-block;width:90%}.trending-wrapper .trending-lead{text-transform:uppercase;margin:0 0 0 10px;padding:0 10px 0 0;display:inline-block;line-height:40px;position:relative;cursor:pointer;background:#ededed;color:#e6248a;vertical-align:top}.trending-wrapper .trending-item{display:inline-block;*display:inline;margin-left:-2px;line-height:40px}.trending-wrapper .trending-item:first-of-type{margin-left:0}.trending-wrapper .trending-item a{line-height:40px;padding:0 14px;display:block}.trending-wrapper .trending-item a,.trending-wrapper .trending-item a:hover,.trending-wrapper .trending-item a:visited,.trending-wrapper .trending-item a:hover:visited{color:#333}.trending.pro{width:100%;max-width:927px;display:table;overflow:hidden;border-collapse:separate;border-spacing:2px;margin-left:22px;margin-top:30px}@media only screen and (max-width:999px){.trending.pro{display:none}}.trending.pro .menu-item-container{background:#ededed;padding:0 12px;line-height:40px;font-size:13px;display:table-cell;text-align:center}.trending.pro .menu-item-container a{color:#333}.trending.pro .menu-item{font-size:inherit;display:inline}.trending.pro .menu-item a{font-size:inherit;padding-left:0;padding-right:0;line-height:40px}.trending.pro .menu-item a:hover{background-color:inherit}.sub-set{position:absolute;right:0;overflow:none}.sub-set svg{float:right;padding-top:10px;padding-right:10px;padding-left:10px}.trending-wrapper .trending-item.sub-set a,.trending-wrapper .trending-item.sub-set a:hover,.trending-wrapper .trending-item.sub-set a:visited,.trending-wrapper .trending-item.sub-set a:hover:visited{color:#fff;padding-right:0}.breadcrumb{font-size:13px;margin-bottom:30px}@media (max-width:700px){.breadcrumb{display:none}}.breadcrumb li{display:inline-block}.breadcrumb li:after{content:'>';margin-left:1ex;margin-right:1ex}.breadcrumb li:last-child:after{content:none;margin:0}.box{display:table;margin-bottom:40px;float:left;clear:both;width:100%}.box.separator{border-bottom:1px #ccc dotted;border-top:1px #ccc dotted}.box.separator .sub-box{padding:0 24px 0 0}.box.contrast{background:#ededed}.box.contrast .sub-box{padding:8px 16px}.box.less-space{margin-bottom:30px}.box .sub-box{float:left;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.box .sub-box.auto{width:auto;float:left}.box .sub-box:nth-child(odd){border-bottom:1px #fff dotted}@media (min-width:575px){.box .sub-box{width:50%;float:none;display:table-cell;vertical-align:top;height:100%}.box .sub-box:nth-child(odd){border-bottom:none;border-right:1px #fff dotted}.box .sub-box.full{width:100%;border-right:none}}.box h3,.box h4{font-weight:600;font-size:16px;line-height:40px;text-transform:uppercase;vertical-align:middle}.box .inline{float:left;margin:12px 0 0}.box p{font-size:16px;line-height:24px;margin-bottom:1rem;color:#333}.box li{font-size:16px;line-height:28px}.box ul{margin-bottom:1rem}#sidebar .box{margin-bottom:30px}.pagination-numerical-list{display:none}@media screen and (min-width:575px){.pagination-numerical-list{display:block;text-align:center;font-size:0;border-bottom:1px solid #ccc;padding:5px 0}.box .pagination-numerical-list{margin-bottom:0}}.pagination-numerical-list-item{display:inline-block;zoom:1;*display:inline;vertical-align:top;line-height:40px;font-size:1rem;min-width:30px}.pagination-numerical-list-item.current-page{color:#333;background-color:#ddd}.pagination-numerical-list-item-link{display:block;width:100%;height:100%}.load-comments:hover{color:#fff}input[type="search"]{-webkit-appearance:none;border:1px solid #ddd;font-size:1em;padding-right:3em;line-height:2.5em;padding-left:.75em;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;outline-offset:0;border-radius:0;margin-top:0;margin-bottom:0}input[type="search"]:focus{outline-offset:0}@media screen and (min-width:700px){input[type="search"]{padding-right:0}}@media screen and (min-width:900px){input[type="search"]{padding-right:54px;padding-top:13px;padding-bottom:11px;line-height:16px;font-size:16px}}label{line-height:1.4;display:block;margin:0 0 5px}.byline{display:block;margin-bottom:4px;line-height:23px;font-size:13px}.byline .relative-date{margin-left:4px}.primary-nav.pro .wrapper,.primary-nav.pro .menuitems.container,.primary-nav.pro .wrapper .menu-item-container a{background:#601948!important}.primary-nav{position:relative;z-index:1600}.primary-nav .wrapper{background:#315062}.primary-nav .menuitems{display:none;position:absolute;width:100%;left:0;top:60px;z-index:999}.primary-nav .menuitems:hover{z-index:999}@media screen and (min-width:700px){.primary-nav .menuitems{z-index:auto;display:block;position:relative;top:0}}.nav-list{font-size:0}@media screen and (min-width:700px){.nav-list{height:44px;overflow:hidden}}.menu-item{background-color:#315062}@media screen and (min-width:700px){.menu-item{display:inline-block;zoom:1;*display:inline;vertical-align:top;font-size:0;background-color:transparent}}.menu-item a{display:block;line-height:44px;font-size:1rem;padding-left:1rem}.menu-item a:not(.maglink){padding-right:1rem}@media screen and (min-width:700px){.menu-item a{display:inline-block;zoom:1;*display:inline;vertical-align:top}}.menu-item a,.menu-item a:visited,.menu-item a:hover,.menu-item a:visited:hover{color:#fff}@media screen and (min-width:700px){.menu-item a:not(.menu-item-magazines):hover{background-color:#315062}}.menu-item a:not(.menu-item-magazines):active{background-color:#2f6e91}.menu-item .icon-home{font-size:1.3em;line-height:1}.pro .menu-item{background-color:transparent}.menu-item.menu-item-main-pro{background-color:#8c2b5e}@media screen and (min-width:700px){.menu-item.menu-item-main-pro{min-width:70px;text-align:center}}.menu-item.menu-item-main-pro a{background-color:transparent}.pro .menu-item.menu-item-main-pro{background-color:#2f6e91}.sub-menu{vertical-align:top;display:none;background-color:#315062;font-size:0}.menu-hamburger{height:60px;margin-bottom:0}.menu-hamburger:before,.menu-hamburger:after{content:"";position:absolute;width:18px;margin-left:-9px;top:50%;left:50%}.menu-hamburger:before{height:8px;border-top:2px solid #fff;border-bottom:2px solid #fff;margin-top:-6px}.menu-hamburger:after{height:2px;background:#fff;margin-top:-1px}.menu-hamburger.checked:before{border-top:none;border-bottom:none;border-left:2px solid #fff;border-right:2px solid #fff;width:8px;height:18px;margin-top:-9px;margin-left:-6px}.menu-hamburger.checked:after{width:2px;height:18px;margin-top:-9px;margin-left:-1px}@media screen and (min-width:700px){.nav-sub-set-container{position:absolute;top:0;right:0}}@media screen and (min-width:700px){.menu-item-nav-sub-set{float:right}}#sidebar{-webkit-box-sizing:border-box;box-sizing:border-box;float:left}@media screen and (min-width:700px){#sidebar{padding-left:20px;padding-right:20px}}@media screen and (min-width:1000px){#sidebar{padding-left:0;padding-right:0;width:300px}#sidebar>*:first-child{margin-top:1em}}@media (min-width:900px){.review-article+#sidebar{margin-top:0}}.review-article+#sidebar>*:first-child{margin-top:0}.pagination.internal{border-top:1px solid #ccc;border-bottom:1px solid #ccc;width:100%}.pagination.internal.expand{-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;background:#2f6e91}@media (min-width:700px){.pagination.internal.expand{padding:0 0 0 20px}}.pagination.internal.current-prev-next .current{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;float:left;margin-bottom:0;padding:10px;border-bottom:1px solid #ccc;display:none}@media screen and (min-width:575px){.pagination.internal.current-prev-next .current{display:none}}.pagination.internal.current-prev-next .current .title{font-size:13px;text-transform:uppercase;width:100%;text-align:center;float:left;font-weight:800}.pagination.internal.current-prev-next .current .page-title{font-size:16px;width:100%;float:left;text-align:center}.pagination.internal.current-prev-next .direction{text-transform:uppercase;color:#333;font-weight:600;line-height:24px;margin:10px 0}.pagination.internal.current-prev-next .next{margin:10px 0;line-height:24px;-webkit-box-sizing:border-box;box-sizing:border-box;width:50%}.pagination.internal.current-prev-next .next:hover .page-title{text-decoration:underline}.pagination.internal.current-prev-next .next .page-title{clear:both}.pagination.internal.current-prev-next .next .direction:before,.pagination.internal.current-prev-next .next .direction:after{color:#fff;background:#333;width:24px;height:24px;font-size:10px;line-height:24px;top:0}.pagination.internal.current-prev-next .next{float:right;text-align:right;padding-left:20px}.pagination.internal.current-prev-next .next .direction:after{float:right;margin-left:10px;text-indent:9px;text-align:left}.pagination.internal.current-prev-next .next .direction,.pagination.internal.current-prev-next .next .page-title{float:right}.pagination.internal label{width:100%;float:left;font-size:16px;line-height:40px;position:relative;margin:0}.pagination.internal label .box-title{font-weight:600;float:left;text-transform:uppercase;margin-left:20px}@media (min-width:700px){.pagination.internal label .box-title{margin-right:17px}}.pagination.internal label .current-page{cursor:pointer;float:left;overflow:hidden;font-weight:300;text-transform:uppercase;display:none}@media (min-width:700px){.pagination.internal label .current-page{display:block}}.pagination.internal label .pages-wrapper{position:relative;clear:both;font-weight:300;z-index:100000}@media (min-width:700px){.pagination.internal label .pages-wrapper{float:none;overflow:hidden;display:block;clear:none;margin-right:36px}}.pagination.internal label:after{cursor:pointer;font-size:22px;position:absolute;top:2px;right:10px}@media (min-width:700px){.pagination.internal label{max-height:40px;overflow:visible}.pagination.internal label:after{margin-top:0}}.pagination.internal input[type=checkbox].hidden{margin-left:-200px}@media (min-width:700px){.pagination.internal input[type=checkbox].hidden:checked~label:after{position:absolute;right:10px;top:0}}.pagination.internal .pages{display:none;float:left;clear:both;border:1px solid #ccc;background:#fff;font-weight:600;text-transform:none;margin-bottom:0}.pagination.internal .pages li{border-bottom:1px solid #ccc}.pagination.internal .pages li a{line-height:40px;padding:0 10px;display:block}.pagination.internal .pages li:last-child{border-bottom:none}.pagination.internal .pages li:hover{cursor:pointer}.pagination.internal .pages li.current,.pagination.internal .pages li:hover,.pagination.internal .pages li>a:active{background:#eAeAeA;color:#2f6e91}.pagination.internal input[type=checkbox].hidden:checked~label .pages-wrapper .pages{display:block;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}@media screen and (min-width:700px){.review-article .sticky-pagination-header{padding-bottom:10px;border-bottom:none}}@media screen and (min-width:700px){.review-article .sticky-pagination-header .socialite-widget{bottom:68px}}.swipe-pagination:not(.activated),.swipe-pagination:not(.activated) i{visibility:hidden}.swipe-pagination{position:relative;margin-left:-20px;width:100vw;overflow:hidden}@media screen and (min-width:700px){.swipe-pagination{margin-bottom:-16px;height:72px}}@media screen and (min-width:575px){.swipe-pagination{width:100%;margin-left:0}}.swipe-pagination .swipe-pages-container{height:46px;position:relative}@media screen and (min-width:700px){.swipe-pagination .swipe-pages-container{height:52px}}.swipe-pagination .swipe-pages-wrapper{font-size:0;white-space:nowrap;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:scroll;height:80px;overflow-y:hidden;overflow-x:scroll;-ms-overflow-style:none;will-change:transform;-webkit-transform:translateZ(0);transform:translateZ(0);position:relative;margin-left:27px}@media screen and (min-width:700px){.swipe-pagination .swipe-pages-wrapper{height:79px}}.swipe-pagination .swipe-pages-wrapper::-webkit-scrollbar{display:none;width:0!important}.swipe-pagination .swipe-pages-wrapper-container{height:100%;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box}.swipe-pagination .sticky-page-title{display:inline-block;background-color:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;position:relative;top:-1px;border-top:1px solid #fff;border-bottom:1px solid #fff}@media screen and (min-width:700px){.swipe-pagination .sticky-page-title{border:none}}.swipe-pagination .sticky-page-title.current{border-top:1px solid #2f6e91;border-bottom:1px solid #2f6e91}@media screen and (min-width:700px){.swipe-pagination .sticky-page-title.current:before{content:'';border:solid transparent;height:0;width:0;position:absolute;pointer-events:none;border-top:15px solid #2f6e91;border-left:15px solid transparent;border-right:15px solid transparent;top:100%;left:50%;margin-left:-15px;display:inline-block;z-index:10000}}.swipe-pagination .sticky-page-title.current a{background-color:#2f6e91;color:#fff}.swipe-pagination .sticky-page-title:hover{background-color:#2f6e91;color:#fff;border-top:1px solid #2f6e91;border-bottom:1px solid #2f6e91}@media screen and (min-width:700px){.swipe-pagination .sticky-page-title:hover{height:52px}}.swipe-pagination .sticky-page-title:hover a{text-decoration:none;color:#fff}.swipe-pagination .sticky-page-title:hover a:before{border-left:none}.swipe-pagination .sticky-page-title:last-child{margin-right:27px}.swipe-pagination a{display:block;line-height:43px;padding:0 8px;white-space:nowrap;color:#323232;position:relative;font-size:13px;text-decoration:none}@media screen and (min-width:700px){.swipe-pagination a{font-size:.9rem;line-height:50px}}.swipe-pagination .btn-scroll{position:absolute;top:0;border:1px solid #191919;background-color:#fff;padding:0 7.5px;height:45px;-webkit-box-sizing:border-box;box-sizing:border-box;cursor:pointer}@media screen and (min-width:700px){.swipe-pagination .btn-scroll{height:52px}}.swipe-pagination .btn-scroll.btn-scroll-right{right:0;overflow:visible}@media screen and (min-width:700px){.swipe-pagination .btn-scroll.btn-scroll-right{right:1px}}.swipe-pagination .btn-scroll.btn-scroll-right:before{content:'';position:absolute;width:92px;height:100%;top:0;left:-93px;background:-webkit-gradient(linear,right top,left top,from(#fff),to(rgba(255,255,255,0)));background:-webkit-linear-gradient(right,#fff,rgba(255,255,255,0));background:linear-gradient(to left,#fff,rgba(255,255,255,0))}.swipe-pagination .btn-scroll.btn-scroll-left{left:0}.swipe-pagination .btn-scroll .icon{color:#191919;font-size:10px}.swipe-pagination .btn-scroll.disabled{border-color:#ccc;pointer-events:none;cursor:none}.swipe-pagination .btn-scroll.disabled .icon{color:#ccc}@media screen and (min-width:700px){.swipe-pagination .sticky-page-number{display:none}}.review-article .socialite-widget{margin-bottom:20px}@media (min-width:900px){.review-article .socialite-widget{width:280px;position:absolute;right:0;bottom:0;text-align:right}}.socialite-widget-ul{font-size:0;display:inline-block;zoom:1;*display:inline;vertical-align:top}.box .socialite-widget-ul{margin-bottom:0}.socialite-widget-item{display:inline-block;zoom:1;*display:inline;vertical-align:middle;width:24px;height:24px;line-height:24px;font-size:1rem;margin-left:8px}.socialite-widget-item:first-child{margin-left:0}.socialite-widget-item a{background-color:#333;display:block;line-height:24px;width:100%;height:100%;text-align:center;color:#fff;border-radius:50%;text-decoration:none}.socialite-widget-item a:visited,.socialite-widget-item a:hover,.socialite-widget-item a:visited:hover{color:#fff;text-decoration:none}.socialite-widget-item .icon{font-size:.9em;width:100%;height:100%;line-height:24px}.socialite-widget-item .icon:before{display:block}.num-shares-wrapper{display:none;zoom:1;margin-left:10px;line-height:24px;vertical-align:top}.num-shares-label{text-transform:uppercase;margin-left:4px;display:none}@media screen and (min-width:700px){.num-shares-label{display:inline-block;zoom:1;*display:inline}}.num-shares-value{font-weight:700}.socialite-widget-item .facebook,.socialite-widget-item .icon-facebook,.buttons-social .icon-facebook{background:#3B5998}.socialite-widget-item .facebook:hover,.socialite-widget-item .icon-facebook:hover,.buttons-social .icon-facebook:hover{background:#4c70ba}.socialite-widget-item .twitter,.socialite-widget-item .icon-twitter,.buttons-social .icon-twitter{background:#4099FF}.socialite-widget-item .twitter:hover,.socialite-widget-item .icon-twitter:hover,.buttons-social .icon-twitter:hover{background:#73b4ff}.socialite-widget-item .whatsapp{background:#64D448}.socialite-widget-item .whatsapp:hover{background:#87de71}.socialite-widget-item .pinterest,.socialite-widget-item .icon-pinterest{background:#BD081C}.socialite-widget-item .pinterest:hover,.socialite-widget-item .icon-pinterest:hover{background:#ee0a23}.buttons-social .icon-youtube{background:#CD201F}.buttons-social .icon-youtube:hover{background:#e23e3d}.socialite-widget-item .email{background:#333}.socialite-widget-item .email:hover{background:#4d4d4d}.buttons-social .icon-amazon{background:#f90}.buttons-social .icon-amazon:hover{background:#ffad33}.burgerbar .buttons-social a{border:none}.burgerbar .buttons-social a:before{font-size:14px;line-height:24px;width:100%;height:100%}.newsletter-signup{display:block!important;background-color:#ededed;border-bottom:1px solid #ccc}@media (max-width:900px){.newsletter-signup{float:none!important}}.newsletter-signup .grey-box{color:#666}.newsletter-signup>h3{min-height:36px;font-size:16px;line-height:1.25em;font-family:"Open Sans",Arial,sans-serif;padding:8px 0;border-top:1px solid #ccc;border-bottom:1px solid #ccc}.newsletter-signup>h3 span{display:block;-webkit-box-sizing:border-box;box-sizing:border-box;width:300px;margin:0 auto}.newsletter-signup .icon-envelope{float:left;background-color:#2f6e91;color:#fff;text-align:center;border-radius:50%;font-size:25px;line-height:36px;width:38px;height:38px;margin-right:10px;margin-left:10px}.newsletter-signup small{font-size:10px;line-height:12px}@media screen and (min-width:700px){.newsletter-signup{float:none}}@media screen and (min-width:900px){.newsletter-signup{float:none;width:100%}}@media screen and (max-width:900px){.newsletter-signup .icon-envelope{margin-left:0}.newsletter-signup .grey-box{padding-left:0;padding-right:0}.newsletter-signup h3 span{width:300px;margin:0 auto}}.newsletter-signup .newsletter-logo{text-align:center}.newsletter-signup .newsletter-logo img{height:20px;padding-top:2px}.newsletter-signup.product-newsletter{border:solid 1px #333;-webkit-box-sizing:border-box;box-sizing:border-box}.newsletter-signup.product-newsletter h3,.newsletter-signup.product-newsletter h4{color:#fff;text-transform:none;font-family:"Open Sans",sans-serif}.newsletter-signup.product-newsletter h3{background:#333;font-size:15px;line-height:20px;border-top:none;border-bottom:none}.newsletter-signup.product-newsletter .icon-filled-envelope{float:left}.newsletter-signup.product-newsletter .product-cta{font-weight:700;display:inline}.newsletter-signup.product-newsletter .product-info{font-weight:400;display:inline}.newsletter-signup.product-newsletter .reduce{font-size:80%;display:inline}.newsletter-signup.product-newsletter h4{background-color:#666;font-size:.75em;line-height:33px}.newsletter-signup.product-newsletter p{color:#333;text-align:center;font-size:13px;line-height:17px;width:58%;margin-top:.5rem;display:inline-block;margin-left:5px}.newsletter-signup.product-newsletter p .jump-out-text{font-weight:700;display:block}.newsletter-signup.product-newsletter footer{color:#666;margin:.75rem 0 .5rem}.newsletter-signup .newsletter-image{display:inline-block;width:35%;margin-left:8px;background:url("/media/img/newsletter-image.png") no-repeat;background-size:auto 102px;background-repeat:no-repeat;image-rendering:-moz-crisp-edges;image-rendering:-o-crisp-edges;image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges;-ms-interpolation-mode:nearest-neighbor}.newsletter-signup .newsletter-button{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;padding:0 17px;background:-webkit-gradient(linear,left bottom,left top,color-stop(50%,#E94E1B),color-stop(50%,#ed724a));background:-webkit-linear-gradient(bottom,#E94E1B 50%,#ed724a 50%);background:linear-gradient(to top,#E94E1B 50%,#ed724a 50%);height:44px;text-align:center}.newsletter-signup .newsletter-button a{color:#fff;font-size:1em;font-weight:900;display:inline-block;padding-top:14px;height:100%;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.newsletter-signup .newsletter-button a:hover,.newsletter-signup .newsletter-button a:visited{color:#fff;text-decoration:none}.newsletter-signup .newsletter-button .icon{color:#fff;font-size:12px;position:relative;top:-2px;padding-left:3px}.newsletter-signup .subtitle{display:block;padding-left:10px;width:300px;margin:auto}.icon-filled-envelope{float:left;text-align:center;border-radius:50%;font-size:40px;line-height:36px;width:38px;height:38px;margin-right:10px;margin-left:10px;background-color:#2f6e91;color:#fff}.newsletter-signup.pro .icon-filled-envelope{background-color:#8c2b5e}.ratingVerdict{clear:both}.menu-item.menu-item-nextup a,.menu-item.menu-item-nextup a:hover{background-color:#1DAFEC}@media screen and (min-width:700px){.menu-item.menu-item-nextup a,.menu-item.menu-item-nextup a:hover{background-color:#1DAFEC}}#article-body .inlinegallery{visibility:hidden;margin-bottom:30px;width:100%}#article-body .inlinegallery,#article-body .inlinegallery .inlinegallery-wrap{position:relative;overflow:hidden}#article-body .inlinegallery .inlinegallery-item{position:relative;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;float:left;width:100%}#article-body .inlinegallery .inlinegallery-item,#article-body .inlinegallery .inlinegallery-item figure{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}#article-body .inlinegallery .inlinegallery-item figure{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;max-height:90vh;margin-bottom:1em;border-bottom:1px solid #333}#article-body .inlinegallery .inlinegallery-item figure p.bordeaux-image-check{position:relative;margin-bottom:0;background-color:#333}#article-body .inlinegallery .inlinegallery-item figure p.bordeaux-image-check img{display:block;width:100%;height:auto;max-height:80vh;object-fit:contain}.review-article #article-body .inlinegallery .inlinegallery-item>*:last-child{margin-bottom:0}.newsletter-signup,.newsletter-signup>h3{background-color:#fff}.newsletter-signup .grey-box{padding:1ex;margin:0 auto;width:300px;-webkit-box-sizing:border-box;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}#article-body .widthsetter{width:100%}#article-body .widthsetter .articletable{display:inline-block;width:100%;margin-bottom:20px;word-break:normal;overflow-x:scroll;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#article-body .widthsetter .articletable::-webkit-scrollbar{-webkit-appearance:none;-moz-appearance:none}#article-body .widthsetter .articletable::-webkit-scrollbar-thumb{border-radius:8px;border:2px solid #fff;background-color:rgba(0,0,0,.5)}#article-body .widthsetter .articletable::-webkit-scrollbar-track{background-color:#fff;border-radius:8px}#article-body .widthsetter .articletable table{margin-left:150px;cursor:pointer}#article-body .widthsetter .articletable table tbody,#article-body .widthsetter .articletable table thead{text-align:center}#article-body .widthsetter .articletable table th,#article-body .widthsetter .articletable table td{padding:14px;min-width:10px;max-width:150px;font-size:13px;line-height:13px}@media (min-width:575px){#article-body .widthsetter .articletable table th,#article-body .widthsetter .articletable table td{font-size:15px;line-height:15px;max-width:200px}}#article-body .widthsetter .articletable table thead>tr{background-color:#333;color:#fff}#article-body .widthsetter .articletable table thead>tr th{background-color:#333}#article-body .widthsetter .articletable table thead~tbody tr:first-of-type{background-color:#fff;color:#333}#article-body .widthsetter .articletable table thead~tbody tr:first-of-type td{background-color:#fff}#article-body .widthsetter .articletable table tr .firstcol{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;max-width:120px;min-height:30px;left:0;padding:0 14px;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:100;cursor:default}@media (min-width:575px){#article-body .widthsetter .articletable table tr .firstcol{max-width:200px}}#article-body .widthsetter .articletable table tr:nth-of-type(2n+1),#article-body .widthsetter .articletable table tr:nth-of-type(2n+1) th,#article-body .widthsetter .articletable table tr:nth-of-type(2n+1) td{background-color:#fff}#article-body .widthsetter .articletable table tr:first-of-type{background-color:#333;color:#fff}#article-body .widthsetter .articletable table tr:first-of-type th,#article-body .widthsetter .articletable table tr:first-of-type td{background-color:#333}body{background-color:#fff;-webkit-text-size-adjust:100%}a{color:#2f6e91;text-decoration:none}a:hover{text-decoration:underline}a:visited{color:#09c}a:visited:hover{color:#09c}button{font-size:.875em;line-height:3em;border:solid 1px #333;color:#fff;background-color:#333;text-transform:uppercase;font-family:"Open Sans",sans-serif;margin:0;padding:1ex 1em}button:focus{outline:0}button::-moz-focus-inner{border:0}@media screen and (min-width:700px){.mobile-only{display:none}}#affiliateDisclaimer{text-align:center;font-size:14px;line-height:22px;padding:0 25px;margin-top:30px;color:#333}@media screen and (max-width:1000px){#affiliateDisclaimer{font-size:13px;line-height:21px;margin-top:20px}}#affiliateDisclaimer a{color:#333;text-decoration:underline}.masthead-item.user-locale{border-right:1px solid #97b7c8;padding-right:10px;height:28px;margin-top:16px;padding-left:10px;margin-right:10px}.masthead-item.user-locale .locale__flags{width:20px;height:15px;display:inline-block;margin-bottom:8px}.masthead-item.user-locale .locale__flags svg{float:left;width:20px;height:15px}.masthead-item.user-locale .dropdown__container{display:none;position:relative;overflow:hidden;width:80vw;margin-left:10vw;top:-24px;color:#333;background-color:#fff;z-index:1501}@media (max-width:699px){.masthead-item.user-locale .dropdown__container{left:-10px}}@media (min-width:700px){.masthead-item.user-locale .dropdown__container{position:absolute;width:300px;top:37px;right:0}}.masthead-item.user-locale .locale-label{float:left;height:28px;margin-right:10px;line-height:28px;font-size:10px;display:none}@media screen and (min-width:760px){.masthead-item.user-locale .locale-label{display:block}}@media screen and (max-width:699px){.masthead-item.user-locale{position:absolute;top:-9px;right:-webkit-calc(50% - 115px);right:calc(50% - 115px);border:none}.masthead-item.user-locale .locale__flags svg{height:10px;float:right;width:13px}}.masthead-item.buttons-social{padding:0}.burgerbar .other-links{display:none}@media screen and (min-width:850px){.burgerbar .other-links{display:block;margin-right:0}}.button-search{margin-left:28px}@media (max-width:699px){.burgerbar .logo{margin-left:60px}}@media only screen and (max-width:360px){.burgerbar .logo{margin-left:45px}}@media (min-width:700px) and (max-width:849px){.button-search{margin-left:0}}@media screen and (max-width:699px){.masthead-item.user-locale{border:none;position:static}.masthead-item.user-locale .locale__flags{position:absolute;right:70px;top:22px}}@media screen and (max-width:699px){.masthead-item.user-locale .locale__flags svg{float:left;width:20px;height:15px}}.trending-wrapper .trending-item.black-friday{background:-webkit-gradient(linear,left top,left bottom,from(#ab3573),to(#ea489d))0 0/cover no-repeat;background:-webkit-linear-gradient(top,#ab3573,#ea489d)0 0/cover no-repeat;background:linear-gradient(to bottom,#ab3573,#ea489d)0 0/cover no-repeat}.trending-wrapper .trending-item.black-friday a,.trending-wrapper .trending-item.black-friday a:hover,.trending-wrapper .trending-item.black-friday a:visited,.trending-wrapper .trending-item.black-friday a:hover:visited{color:#fff}.trending-wrapper .trending-item.black-friday a::after{content:"DEALS";background-color:#000;width:34px;height:34px;border-radius:50%;font-size:11px;display:block;float:right;line-height:36px;text-align:center;margin-top:3px;margin-left:8px;letter-spacing:-1px;text-indent:-2px}.primary-nav .menuitems .menu-item.techlife{background:#333}@media only screen and (min-width:700px){.primary-nav .menuitems .menu-item.techlife{padding:0 16px;text-align:center;margin-right:5px}}.pagination.internal:not(.recent-news) .page-title{display:none}.swipe-pagination a:visited{color:#323232}.search-box input{color:#333;max-height:44px}.newsletter-signup .subtitle{-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center}.newsletter-signup .newsletter-image{height:125px;background-size:auto 125px}.jwplayer-herowrapper{padding-top:56.25%;padding-left:24px;padding-right:24px;position:relative;margin-bottom:30px;margin-top:30px}@media screen and (min-width:900px){.jwplayer-herowrapper{margin-top:0}}.jwplayer-herowrapper .jwplayer{position:absolute;top:0;left:0}.trending-lead:after,.trending-lead:before{left:88%;top:18%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}.trending-lead::after{border-color:transparent;border-left-color:#ededed;border-width:19px;margin-top:-8px}.trending-lead::before{border-color:transparent;border-left-color:#fff;border-width:22px;margin-top:-11px}.trending-lead{vertical-align:middle!important;bottom:16px}.burgerbar .logo{text-align:left}@media (max-width:699px){.burgerbar .logo{margin-left:60px}}@media only screen and (max-width:360px){.burgerbar .logo{margin-left:45px}}.locale__flags{width:30px!important}.locale__flags:hover{cursor:pointer}@media (min-width:700px) and (max-width:849px){.button-search{margin-left:0}}@media screen and (max-width:699px){.masthead-item.user-locale{border:none;position:static}.masthead-item.user-locale .locale__flags{position:absolute;right:70px;top:22px}}@media screen and (max-width:699px){.masthead-item.user-locale .locale__flags svg{float:left;width:20px;height:15px}}.locale__flags .flags__flag{float:left;width:20px;height:15px;background-size:contain;background-repeat:no-repeat}.chunk.rating{width:94px;display:inline-block;top:0}.trending-wrapper .trending-item.trending-awards{background:-webkit-gradient(linear,left top,left bottom,from(#ab3573),to(#ea489d))0 0/cover no-repeat;background:-webkit-linear-gradient(top,#ab3573,#ea489d)0 0/cover no-repeat;background:linear-gradient(to bottom,#ab3573,#ea489d)0 0/cover no-repeat}.trending-wrapper .trending-item.trending-awards a,.trending-wrapper .trending-item.trending-awards a:hover,.trending-wrapper .trending-item.trending-awards a:visited,.trending-wrapper .trending-item.trending-awards a:hover:visited{color:#fff}</style>
+<link rel="apple-touch-icon" href="https://vanilla.futurecdn.net/techradar/128169/apple-touch-icon.png">
+<link rel="shortcut icon" href="https://vanilla.futurecdn.net/techradar/128169/favicon.ico">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="https://vanilla.futurecdn.net/techradar/128169/apple-touch-icon.png">
+<meta property="og:title" content="Samsung Galaxy S10 Plus review">
+<meta property="og:site_name" content="TechRadar">
+<meta property="og:url" content="https://www.techradar.com/reviews/samsung-galaxy-s10-plus">
+<meta property="og:description" content="This is the new Samsung Galaxy S10 phone you should consider">
+<meta property="og:image" content="https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M-1200-80.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:type" content="article">
+<meta property="article:publisher" content="https://www.facebook.com/TechRadar">
+<meta property="article:author" content="https://www.facebook.com/TechRadar">
+<meta property="fb:app_id" content="235441786508054">
+<meta property="fb:pages" content="">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="@TechRadar">
+<meta property="twitter:title" content="Samsung Galaxy S10 Plus review">
+<meta property="twitter:description" content="This is the new Samsung Galaxy S10 phone you should consider">
+<meta property="twitter:creator" content="@TechRadar">
+<meta property="twitter:image" content="https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M-1200-80.jpg">
+<meta property="twitter:account_id" content="15560223">
+<meta name="google-site-verification" content="jEzBNX-r47v-rgc86g7xG47qMqF4VJuXdLUueTx8saU">
+<meta name="p:domain_verify" content="10329f1fd4d0a2cd5c0d3b3b809cb4cd">
+<meta name="taboola:url" content="https://www.techradar.com/reviews/samsung-galaxy-s10-plus">
+<meta name="botify-site-verification" content="xkNFqB6l1qBl8BEqMjQvrHuYinhxlJVe">
+<meta name="msvalidate.01" content="CC462E6DF91492086145CA5EBDCB615E">
+<meta name="theme-color" content="#2f6e91">
+<script type="text/javascript">
+window.missingImage = function(){var missingImage = document.createElement('img');missingImage.src = '//vanilla.futurecdn.net/techradar/media/img/missing-image.svg';return missingImage;}
+VAN={};
+var FEP_object;
+VAN.gaDimensions=function(e,i,a,n){ga("create",e,"auto",{useAmpClientId:!0}),null!=a&&ga("set",{dimension57:a}),ga("require","displayfeatures"),n.fepPrimaryProduct&&ga("set",{dimension40:n.fepPrimaryProduct}),n.fepSecondaryProducts.length&&ga("set",{dimension41:n.fepSecondaryProducts.join("|")}),n.fepPrimaryProduct[0]&&ga("set",{dimension42:n.fepPrimaryCompany}),n.fepCompanies.length>=1&&ga("set",{dimension43:n.fepCompanies.join("|")}),n.fepPrimaryProduct&&ga("set",{dimension45:n.fepPrimaryProduct}),n.fepCategory&&ga("set",{dimension46:n.fepCategory}),n.fepArticleName.length>0&&ga("set",{dimension47:n.fepArticleName}),n.fepAlgorithm&&ga("set",{dimension50:n.fepAlgorithm}),n.fepNullified?ga("set",{dimension51:"true"}):ga("set",{dimension51:"false"}),"object"==typeof n.fepGroups&&Array.isArray(n.fepGroups)&&ga("set",{dimension58:n.fepGroups.join("|")}),n.thirdCategories&&ga("set",{dimension74:n.thirdCategories.join("|")});var o="false";try{"undefined"!=typeof window.vanilla&&"undefined"!=typeof window.vanilla.aft&&(o=window.vanilla.aft.logged_in===!0?"true":"false")}catch(t){console.error("Badly structured aft object",t)}ga("set",{dimension13:o}),ga("set",{dimension10:document.querySelector("html").getAttribute("data-locale")});try{var r=document.cookie.replace(/(?:(?:^|.*;\s*)_ga\s*\=\s*([^;]*).*$)|^.*$/,"$1");r&&ga("set",{dimension59:r})}catch(t){console.log("GA ID error: ",t)}ga("send","pageview",i)}; VAN.assignFep=function(a){try{var e=e||{fepPrimaryProduct:"",fepSecondaryProducts:Array(),fepCompanies:Array(),fepHawk:{},fepCategory:"",fepGroups:Array(),kwMunge:Array(),fepArticleName:"",fepPrimaryCompany:"",fepAlgorithm:"",fepNullified:"",ready:!1,primaryCategory:"",secondaryCategories:Array(),thirdCategories:Array()};if(window.FEP=e,!e.ready){if("undefined"==typeof a)throw"FEPNotReady";e.fepPrimaryProduct=a[0].adTags.primaryProduct,e.fepSecondaryProducts=a[0].adTags.secondaryProducts,e.fepCompanies=a[0].adTags.companies,e.fepCategory="object"==typeof a[0].adTags.category?"":a[0].adTags.category,e.fepGroups="undefined"!=typeof a[0].adTags.groups?a[0].adTags.groups:Array(),e.fepArticleName=a[0].articleName,e.fepAlgorithm=a[0].strategy,e.fepNullified=a[0].nullified,e.fepPrimaryCompany=null!==a[0].adTags.primaryCompany&&a[0].adTags.primaryCompany.length>=1?a[0].adTags.primaryCompany:" ","undefined"!=typeof a[0].adTags.primaryCategory&&"undefined"!=typeof a[0].adTags.secondaryCategories&&"undefined"!=typeof a[0].adTags.thirdCategories&&(e.primaryCategory=a[0].adTags.primaryCategory,e.secondaryCategories=a[0].adTags.secondaryCategories,e.thirdCategories=a[0].adTags.thirdCategories),e.fepIAB=[],e.ready=!0;var r=["fepPrimaryProduct","fepSecondaryProducts","fepCompanies","fepCategory"];r.forEach(function(a){var r=e[a];"object"==typeof r&&(r=r),e.kwMunge=e.kwMunge.concat(r)}),e.kwMunge=e.kwMunge.filter(function(a,r){return e.kwMunge.indexOf(a)==r}),"undefined"!=typeof a[0].hawkTags.primaryProduct&&(e.fepHawk.primaryProduct=a[0].hawkTags.primaryProduct),"undefined"!=typeof a[0].hawkTags.secondaryProducts&&(e.fepHawk.secondaryProducts=a[0].hawkTags.secondaryProducts),"undefined"!=typeof a[0].hawkTags.companies&&(e.fepHawk.companies=a[0].hawkTags.companies),"undefined"!=typeof a[0].hawkTags.groups&&(e.fepHawk.groups=a[0].hawkTags.groups),"undefined"!=typeof a[0].hawkTags.category&&(e.fepHawk.category=a[0].hawkTags.category)}return window.FEP=e,e}catch(o){console.log("fep ga exc "+o.message)}};;
+</script>
+<script>
+try{
+var FEP_object = [{"acceptableLanguage":true,"adTags":{"category":"Mobile_phones","companies":["Google","Huawei","Apple_Inc.","Software"],"editorProducts":"Samsung_Galaxy_S10_Plus","groups":["Mobile_phones","Phone_and_communications"],"primaryCategory":"Mobile_phones","primaryCompany":"Samsung","primaryProduct":"Samsung_Galaxy","secondaryCategories":["Mobile_phones","Phone_and_communications"],"secondaryCompanies":["Google","Huawei","Apple_Inc.","Software"],"secondaryProducts":["Samsung_Galaxy_S","Galaxy","Samsung_Galaxy_S10","Samsung_Galaxy_Fold","S10e"],"thirdCategories":[]},"articleName":"Samsung_Galaxy_S10_Plus","articleType":"review","dataSource":"provided","hawkTags":{"primaryProduct":"Samsung_Galaxy","secondaryProducts":["Samsung_Galaxy_S","Galaxy","Samsung_Galaxy_S10","Samsung_Galaxy_Fold","S10e"],"companies":["Samsung","Google","Huawei","Apple_Inc.","Software"],"category":"Mobile_phones","groups":["Mobile_phones","Phone_and_communications"],"editorProducts":"Samsung_Galaxy_S10_Plus","internalProductName":"Samsung_Galaxy_S10_Plus"},"internalProductName":"Samsung_Galaxy_S10_Plus","nullified":false,"origSite":"techradar","overrides":[],"site":"techradar","strategy":"6.5","timestamp":1565050869,"topProductVsproductName":"0.60869565217391"}];
+}catch(ex){
+if (typeof console == "object") {
+console.log(ex);
+}
+}
+</script>
+<!-- GA TPL PREMIUM -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+// Optimizely Universal Analytics Integration
+window.optimizely = window.optimizely || [];
+window.optimizely.push("activateUniversalAnalytics");
+// Setup the FEP global object form the FEP_object
+// @TODO - can the format of FEP_object be changed server side?
+VAN.assignFep(FEP_object);
+var ga_code = 'UA-48894329-1';
+var analytics_ga_data = {"dimension1":"review","dimension2":"mobile-phones","dimension3":"mobile-phones|phone-and-communications","dimension4":"tech_techradar\/","dimension5":"Ut8b42FiXvQpL2RRa9ARAN","dimension6":"|samsung|samsung_s10_plus|samsung_galaxy_s10_plus|s10_plus|galaxy_s10_plus|samsung|samsung_s10_plus|samsung_galaxy_s10_plus|s10_plus|galaxy_s10_plus|mobile_phones|phone-review|review|awardrecommended|exclude-from-homepage|phone-review|review|awardrecommended|exclude-from-homepage|videoarticle","dimension7":"matt_swider,john_mccann","dimension8":"08-08-2019","dimension9":"1","dimension10":"EN-US","dimension29":"youtube-3Qf_g0d4NRQ","dimension106":"1","dimension126":"en","dimension127":"AU|SG|GB|US","dimension128":"08-08-2019"};
+var version = 'null';
+// Make sure all the GA dimensions are setup and correct
+VAN.gaDimensions(ga_code, analytics_ga_data, version, window.FEP);
+</script>
+<!-- END GA PREMIUM -->
+<script>
+var trailingSlash = false;
+</script>
+<link rel="manifest" href="/manifest.json">
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script id="onesignal_tag" data-app-id-https="bf7c1147-c214-44f3-b909-620c0ec86b97" src="https://vanilla.futurecdn.net/techradar/128169/media/shared/js/onesignal.js" async></script>
+<meta name="lomadee-verification" content="22816996">
+<!-- Hawk Elements' styles -->
+<!-- End Hawk Elements' styles -->
+<script type="application/ld+json">
+{
+"@type": "Review",
+"name": "Samsung Galaxy S10 Plus review",
+"headline": "Samsung Galaxy S10 Plus review",
+"alternativeHeadline": "This is the new Samsung Galaxy S10 phone you should consider",
+"datePublished": "2019-08-08T16:25:30Z",
+"image": "https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M.jpg",
+"author": {
+"@type": "Person",
+"name": "Matt Swider"
+},
+"creator": {
+"@type": "Person",
+"name": "Matt Swider"
+},
+"publisher": {
+"@type": "Organization",
+"name": "TechRadar",
+"url": "https://www.techradar.com",
+"logo": {
+"@type": "ImageObject",
+"url": "https://vanilla.futurecdn.net/techradar/media/img/techradar_logo.png",
+"caption": "TechRadar logo"
+}
+},
+"mainEntityOfPage": {
+"@type": "WebPage",
+"@id": "https://www.techradar.com/reviews/samsung-galaxy-s10-plus"
+},
+"url": "https://www.techradar.com/reviews/samsung-galaxy-s10-plus",
+"thumbnailUrl": "https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M-320-80.jpg",
+"keywords": [
+"Category: Mobile phones",
+"Category: Phone and communications",
+"Category: Mobile phones",
+"Samsung",
+"Samsung S10 Plus",
+"Samsung Galaxy S10 Plus",
+"S10 Plus",
+"Galaxy S10 Plus",
+"Samsung",
+"Samsung S10 Plus",
+"Samsung Galaxy S10 Plus",
+"S10 Plus",
+"Galaxy S10 Plus"
+],
+"reviewBody": "2 minute review The Samsung Galaxy S10 Plus is the almost-everything-included Samsung phone you really want &ndash; if you can afford it, can handle its massive display, and don't want the finally-announced Samsung Galaxy Note 10 that's up for preorder. We were immediately drawn to the Galaxy S10 Plus as the bigger and better version of the Galaxy S10 and cheaper Galaxy S10e . It redefines what a 'phablet' is in 2019, with a 6.4-inch edge-to-edge screen so large it displaces the front camera to&hellip;",
+"itemReviewed": {
+"@type": "Product",
+"name": "Samsung Galaxy S10 Plus",
+"brand": {
+"@type": "Brand",
+"name": "Samsung"
+}
+},
+"reviewRating": {
+"@type": "Rating",
+"ratingValue": "4.5",
+"bestRating": "5"
+},
+"@context": "http://schema.org"
+}
+</script>
+</head>
+<body class="limit-width ">
+<script>window.isIE = false</script>
+<!--[IE]><script>window.isIE = true</script><![endif]-->
+<script>
+window.amIIE = function() {
+return navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') !== -1 || window.isIE;
+}
+</script>
+<nav class="primary-nav">
+<input type="radio" name="burgerbar-expand" class="burgerbar-none-radio" id="burgerbar-none" checked>
+<input type="radio" name="burgerbar-expand" class="burgerbar-radio" id="burgerbar">
+<div class="burgerbar ">
+<div class="container full burgerbar-small">
+<label class="button-menu unchecked menu-hamburger" for="burgerbar" onclick></label>
+<label class="button-menu checked menu-hamburger" for="burgerbar-none" onclick></label>
+<script type="application/ld+json">
+{
+"@type": "Organization",
+"name": "TechRadar",
+"url": "https://www.techradar.com",
+"logo": {
+"@type": "ImageObject",
+"url": "https://vanilla.futurecdn.net/techradar/media/img/techradar_logo.png",
+"caption": "TechRadar logo"
+},
+"@context": "http://schema.org"
+}
+</script>
+<div id="publisherDetails">
+<div class="logo">
+<a href="https://www.techradar.com/">
+<span class="site-logo">
+<svg xmlns="http://www.w3.org/2000/svg" width="149" height="24"><path fill="#FFF" d="M12.5 9.3H8.9v8.2c0 1.4.8 1.7 2.1 1.7.5 0 1-.1 1.5-.1v4.3c-1.1 0-2.2.2-3.2.2-5 0-6.3-1.5-6.3-6.4V9.3H0V5.4h3V0h5.9v5.4h3.6v3.9zm5.2 6.6c.1 2.5 1.5 4.1 4 4.1 1.4 0 2.8-.7 3.4-2h5.5c-1 4.2-4.9 6-8.9 6-5.9 0-9.9-3.5-9.9-9.6 0-5.5 4.4-9.5 9.7-9.5 6.5 0 9.7 4.9 9.4 11H17.7zm7.3-3.3c-.1-2-1.5-3.7-3.5-3.7-2.1 0-3.5 1.5-3.8 3.7H25zm18.9-.6c0-1.5-1.4-2.6-2.9-2.6-3.3 0-3.8 2.8-3.8 5.3 0 2.3 1 4.7 3.5 4.7 2.1 0 3.1-1.2 3.4-3.1h5.7c-.5 4.9-4.2 7.7-9 7.7-5.4 0-9.5-3.7-9.5-9.2 0-5.7 3.6-9.8 9.5-9.8 4.5 0 8.5 2.4 8.9 7.1h-5.8zM50 0h5.9v7.9h.1c.9-1.8 3.3-3 5.5-3 6 0 6.5 4.4 6.5 7v11.6h-5.9v-8.7c0-2.5.3-5-3-5-2.2 0-3.2 1.9-3.2 3.9v9.8H50V0zm18.5 5.4h5.7v3.2h.1c.9-2.3 2.9-3.5 5.4-3.5.5 0 .9 0 1.4.1v5.4c-.8-.2-1.5-.3-2.3-.3-2.9 0-4.4 2-4.4 4.3v8.9h-5.9V5.4zM81.1 11c.1-2.4 1.2-3.9 2.8-4.8 1.6-.9 3.7-1.3 5.7-1.3 4.3 0 8.4.9 8.4 6v7.9c0 1.5 0 3.2.7 4.6h-5.9c-.2-.6-.3-1.1-.3-1.7-1.6 1.7-3.8 2.3-6 2.3-3.4 0-6.2-1.7-6.2-5.5 0-5.9 6.4-5.4 10.5-6.3 1-.2 1.6-.6 1.6-1.7 0-1.4-1.6-1.9-2.9-1.9-1.6 0-2.7.7-3 2.3h-5.4zm7.6 9.4c2.8 0 3.8-1.6 3.6-5.3-.8.5-2.4.6-3.6 1-1.3.3-2.4.9-2.4 2.3s1.1 2 2.4 2zm28.4 3.1h-5.6v-2.1h-.1a5.7 5.7 0 0 1-4.9 2.6c-5.7 0-8.1-4.9-8.1-9.9 0-4.7 2.5-9.1 7.6-9.1 2.2 0 3.9.8 5.1 2.5h.1V0h5.9v23.5zm-12.8-9.2c0 2.5.9 5.2 3.6 5.2 2.9 0 3.5-2.7 3.5-5 0-2.6-.9-5-3.5-5-2.7-.1-3.6 2.5-3.6 4.8zM118 11c.1-2.4 1.2-3.9 2.8-4.8 1.6-.9 3.7-1.3 5.7-1.3 4.3 0 8.4.9 8.4 6v7.9c0 1.5 0 3.2.7 4.6h-5.9c-.2-.6-.3-1.1-.3-1.7-1.6 1.7-3.9 2.3-6 2.3-3.4 0-6.2-1.7-6.2-5.5 0-5.9 6.4-5.4 10.5-6.3 1-.2 1.6-.6 1.6-1.7 0-1.4-1.6-1.9-2.9-1.9-1.6 0-2.7.7-3 2.3H118zm7.6 9.4c2.8 0 3.8-1.6 3.6-5.3-.8.5-2.4.6-3.6 1-1.3.3-2.4.9-2.4 2.3-.1 1.4 1.1 2 2.4 2zm10.2-15h5.7v3.2h.1c.9-2.3 2.9-3.5 5.4-3.5.5 0 1.5 0 2 .1v5.4c-.8-.2-2-.3-2.8-.3-2.9 0-4.4 2-4.4 4.3v8.9h-5.9V5.4z"></path><path fill="#E6248A" d="M143.1 17.6h5.9v5.9h-5.9z"></path></svg>
+<img class="fallback" src="" data-fallback-src="https://vanilla.futurecdn.net/techradar/media/img/techradar_logo.png">
+</span>
+<span class="hidden-header" itemprop="name">TechRadar</span> <span class="strapline">The source for Tech Buying Advice</span>
+</a>
+</div>
+</div>
+<input type="checkbox" name="burgerbar-expand" class="search-checkbox" id="search-checkbox">
+<label class="button-search masthead-item " for="search-checkbox" onclick="">
+<span class="desktop-text">Search</span><span class="icon icon-search"></span>
+</label>
+<form class="search-box" action="https://www.techradar.com/search" method="GET">
+<input type="search" name="searchTerm" placeholder="Search TechRadar" class="search-input">
+<button type="submit" class="search-submit">
+<span class="icon icon-search"></span>
+</button>
+</form>
+<div class="other-links">
+<a href="https://www.techradar.com/rsstoolkit">
+<abbr title="Really Simple Syndication">RSS</abbr>
+</a>
+</div>
+<div class="buttons-social masthead-item">
+<a target="_blank" href="https://www.facebook.com/TechRadar" class="icon icon-circle icon-facebook"></a>
+<a target="_blank" href="https://twitter.com/intent/user?screen_name=techradar" class="icon icon-circle icon-twitter"></a>
+<a target="_blank" href="https://www.amazon.co.uk/techradar?tag=futurepublish-trd-21&amp;ascsubtag=hawk-custom-tracking-21" rel="nofollow" class="icon icon-circle icon-amazon"></a>
+<a target="_blank" href="https://www.youtube.com/user/techradar?sub_confirmation=1" class="icon icon-circle icon-youtube"></a>
+</div>
+<div class="user-locale masthead-item">
+<span class="locale-label"></span>
+<span class="locale__flags"></span>
+</div>
+</div>
+</div>
+<div class="wrapper">
+<div class="menuitems container full">
+<ul class="nav-list">
+<li class="menu-item menu-item-home"><a class="home" href="https://www.techradar.com/"><i class="icon icon-home"></i></a></li>
+<li class="menu-item menu-item-reviews"><a class="" href="https://www.techradar.com/reviews">Reviews</a></li>
+<li class="menu-item menu-item-how to"><a class="" href="https://www.techradar.com/how-to">How To</a></li>
+<li class="menu-item menu-item-phones"><a class="" href="https://www.techradar.com/phones">Phones</a></li>
+<li class="menu-item menu-item-tvs"><a class="" href="https://www.techradar.com/televisions">TVs</a></li>
+<li class="menu-item menu-item-laptops"><a class="" href="https://www.techradar.com/laptops">Laptops</a></li>
+<li class="menu-item menu-item-photography"><a class="" href="https://www.techradar.com/cameras">Photography</a></li>
+<li class="menu-item menu-item-deals"><a class="" href="https://www.techradar.com/deals">Deals</a></li>
+<li class="menu-item menu-item-more menu-level-1 has-submenu
+menu-item-hover-reveal
+">
+More <i class="icon icon-arrow-down"></i><i class="icon icon-arrow-right"></i> <ul class="sub-menu">
+<li class="sub-menu-item menu-level-2"><a href="https://www.techradar.com/car-tech">Car Tech</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.techradar.com/wearables">Wearables</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.techradar.com/tablets">Tablets</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.techradar.com/components">Components</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.techradar.com/audio-visual">Audiovisual</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.techradar.com/gaming">Gaming</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.techradar.com/computing">Computing</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.techradar.com/downloads">Downloads</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.techradar.com/news">News</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.techradar.com/video">Video</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.myfavouritemagazines.co.uk/tech-gadgets/?utm_source=techradar.com&amp;utm_medium=magazines&amp;utm_campaign=magazines&amp;utm_content=tab">Magazine</a></li>
+</ul>
+</li>
+</ul>
+<div class="nav-sub-set-container">
+<div class="menu-item menu-item-none menu-item-main-pro menu-item-nav-sub-set">
+<a href="https://www.techradar.com/pro">Pro</a>
+</div>
+<div class="menu-item menu-item-none menu-item-nextup menu-item-nav-sub-set">
+<a href="https://www.techradar.com/back-to-school-2019">Back to School 2019</a>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<div class="dfp-leaderboard-container"></div>
+<div id="main" class="container full ">
+<div class="trending-wrapper ">
+<div class="trending-bar container full">
+<div class="trending-lead brands-disabled">
+Trending
+</div>
+<ul class="trending-items ">
+<li class="trending-item"> <a href="https://www.techradar.com/tag/buying-guides">Buying Guides</a></li>
+<li class="trending-item"> <a href="https://www.techradar.com/news/gamescom-2019-schedule-date-predictions-news-and-rumors">Gamescom</a></li>
+<li class="trending-item"> <a href="https://www.techradar.com/news/mobile-computing/laptops/best-laptops-1304361">Best Laptops</a></li>
+<li class="trending-item"> <a href="https://www.techradar.com/news/macbook-pro-2019-16-inch">MacBook Pro</a></li>
+<li class="trending-item"> <a href="https://www.techradar.com/news/phone-and-communications/mobile-phones/20-best-mobile-phones-in-the-world-today-1092343">Best Phones</a></li>
+<li class="trending-item"> <a href="https://www.techradar.com/news/iphone-xi">iPhone 11</a></li>
+<li class="trending-item"> <a href="https://www.techradar.com/news/best-tv-us">Best TV</a></li>
+<!-- Start Trending Subset //-->
+<!-- End Trending Subset //-->
+</ul>
+<div id="fadeout"></div>
+</div>
+</div>
+<aside id="affiliateDisclaimer"><small>TechRadar is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="https://www.futureplc.com/terms-conditions/" target="_blank">Learn more</a></small></aside>
+<article class="review-article" data-id="Ut8b42FiXvQpL2RRa9ARAN">
+<div class="header-container">
+<header>
+<div class="header-sub-container">
+<h1 class="review-title-medium">Samsung Galaxy S10 Plus review</h1>
+<h2>This is the new Samsung Galaxy S10 phone you should consider
+</h2>
+<p class="byline">
+<span class="chunk rating">
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star half"></span>
+</span>
+By
+<span class="no-wrap by-author"><a href="https://www.techradar.com/author/matt-swider" rel="author"><span style="white-space:nowrap">Matt Swider</span></a>, </span>
+<span class="no-wrap by-author"><a href="https://www.techradar.com/author/john-mccann" rel="author"><span style="white-space:nowrap">John McCann</span></a></span>
+<time class="no-wrap chunk relative-date" datetime="2019-08-08T16:25:30+00:00">2019-08-08T16:25:30Z</time>
+<span class="no-wrap move-on-reviews"><a class="chunk category" href="https://www.techradar.com/reviews/phones/mobile-phones">Mobile phones</a>&nbsp;<i class="icon icon-category-phones"></i></span>
+</p>
+<nav class="socialite-widget box less-space " data-contexturl="https://www.techradar.com/https://www.techradar.com/reviews/samsung-galaxy-s10-plus">
+<ul class="socialite-widget-ul">
+<li class="socialite-widget-item">
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.techradar.com/reviews/samsung-galaxy-s10-plus" data-platform="facebook" target="_blank" class="facebook socialite" data-action="share">
+<i class="icon icon-facebook"></i>
+</a>
+</li>
+<li class="socialite-widget-item">
+<a href="https://twitter.com/intent/tweet?text=Samsung%20Galaxy%20S10%20Plus%20review&amp;url=https://www.techradar.com/reviews/samsung-galaxy-s10-plus" data-platform="twitter" target="_blank" class="twitter socialite" data-action="tweet">
+<i class="icon icon-twitter"></i>
+</a>
+</li>
+<li class="socialite-widget-item mobile-only">
+<a href="whatsapp://send?text=Samsung%20Galaxy%20S10%20Plus%20reviewhttps://www.techradar.com/reviews/samsung-galaxy-s10-plus?fwa" data-platform="whatsapp" class="whatsapp socialite" data-action="message">
+<i class="icon icon-whats-app"></i>
+</a>
+</li>
+<li class="socialite-widget-item">
+<a href="http://pinterest.com/pin/create/button/?url=https://www.techradar.com/reviews/samsung-galaxy-s10-plus&amp;media=https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M-1200-80.jpg" data-platform="pinterest" target="_blank" class="pinterest socialite" data-action="pin">
+<i class="icon icon-pinterest"></i>
+</a>
+</li>
+<li class="socialite-widget-item">
+<a href="mailto:?subject=I%20found%20this%20webpage&amp;body=Hi,%20I%20found%20this%20webpage%20and%20thought%20you%20might%20like%20it%20https://www.techradar.com/reviews/samsung-galaxy-s10-plus" class="email socialite" data-platform="email">
+<i class="icon icon-envelope-solid"></i>
+</a>
+</li>
+</ul>
+<div class="num-shares-wrapper"><i class="icon icon-share"></i> <span class="num-shares-label">Shares</span> <span class="num-shares-value"></span></div>
+</nav>
+</div>
+</header>
+<div class="center-cropped" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<div class="games-plus-sign-overlay"></div>
+<img src="https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M-480-80.jpg" alt="Samsung Galaxy S10 Plus" class=" block-image-ads hero-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" srcset="https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M-768-80.jpg 768w, https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M-1024-80.jpg 1024w, https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M-1200-80.jpg 1200w" sizes="(min-width: 1000px) 970px,(min-width: 900px) 970px,(min-width: 700px) 970px,(min-width: 575px) 650px,(min-width: 360px) 575px" data-original-mos="https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M.jpg" data-pin-nopin="true">
+<div class="award-placeholder sprite-award-recommended sprite-award-recommended_2019 ">Recommended</div>
+<meta itemprop="url" content="https://cdn.mos.cms.futurecdn.net/MSMpTz6U3tU5EkYo4QhH6M.jpg">
+<meta itemprop="height" content="456">
+<meta itemprop="width" content="920">
+</div>
+<div class="caption-text">Image credit: TechRadar</div>
+</div>
+<div id="content-after-image">
+<section class="content-wrapper">
+<div class="box contrast less-space verdict">
+<div class="sub-box full">
+<h3>Our Verdict</h3>
+<p>The Galaxy S10 Plus is Samsung's new 'everything phone' for 2019, helping disrupt the sameness of the last few generations of handsets. Its 6.4-inch screen is so big it displaces the front camera, while its triple-lens rear camera can take ultra-wide photos. Hidden perks like an in-screen fingerprint sensor and Wireless PowerShare offer a lot of nifty features &ndash; just know Samsung is asking for a lot of money, too.</p>
+</div>
+</div>
+<div class="box contrast less-space pro-con">
+<div class="sub-box">
+<h4 class="icon icon-plus_circle">
+For
+</h4>
+<ul>
+<li>
+Excellent screen-to-body ratio
+</li>
+<li>
+In-screen fingerprint sensor
+</li>
+<li>
+Wireless PowerShare perk
+</li>
+</ul>
+</div>
+<div class="sub-box">
+<h4 class="icon icon-minus_circle">
+Against
+</h4>
+<ul>
+<li>
+Sizable price hike
+</li>
+<li>
+Bixby button still exists
+</li>
+<li>
+Slippery design
+</li>
+</ul>
+</div>
+</div>
+<div class="ratingVerdict" id="best-price-article-top">
+</div>
+<div class="swipe-pagination persistent-nav-keystone-flag sticky-sections">
+<div class="swipe-pages-container">
+<div class="swipe-pages-short-text">Jump To:</div>
+<div class="swipe-pages-wrapper-container">
+<div class="swipe-items-container">
+<ul class="swipe-pages-wrapper">
+<li class="sticky-page-title current">
+<a href="#section-2-minute-review">
+2 minute review
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-price-analysis">
+Price analysis
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-display">
+Display
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-design">
+Design
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-in-screen-fingerprint-sensor">
+In-screen fingerprint sensor
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-camera">
+Camera
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-battery">
+Battery
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-wireless-powershare">
+Wireless PowerShare
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-interface">
+Interface
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-performance">
+Performance
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-who-s-it-for">
+Who's it for?
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-who-s-it-not-for">
+Who's it not for?
+</a>
+</li>
+<li class="sticky-page-title">
+<a href="#section-competition">
+Competition
+</a>
+</li>
+</ul>
+</div>
+</div>
+<button class="btn-scroll btn-scroll-right disabled "><i class="icon icon-arrow-right"></i></button>
+<button class="btn-scroll btn-scroll-left disabled"><i class="icon icon-arrow-left"></i></button>
+</div>
+</div>
+<div id="article-body" class="text-copy bodyCopy auto">
+<div id="futr_botr_cBJdOeV5_ZF1B3nHC_div" class="future__jwplayer"><div id="botr_cBJdOeV5_ZF1B3nHC_div"></div></div><h3 class="article-body__section" id="section-2-minute-review"><span>2 minute review</span></h3><p>The Samsung Galaxy S10 Plus is the almost-everything-included Samsung phone you really want &ndash; if you can afford it, can handle its massive display, and don't want the finally-announced <a href="https://www.techradar.com/news/samsung-galaxy-note-10-what-we-want-to-see">Samsung Galaxy Note 10</a> that's up for preorder.</p><p>We were immediately drawn to the Galaxy S10 Plus as the bigger and better version of the <a href="https://www.techradar.com/reviews/samsung-galaxy-s10"><u>Galaxy S10</u></a> and cheaper <a href="https://www.techradar.com/reviews/samsung-galaxy-s10e"><u>Galaxy S10e</u></a>. It redefines what a 'phablet' is in 2019, with a 6.4-inch edge-to-edge screen so large it displaces the front camera to a hole in the top corner. It&rsquo;s Samsung&rsquo;s marginally better answer to the <a href="https://www.techradar.com/reviews/iphone-xs-max-review"><u>iPhone XS</u></a> notch.</p><p><aside class="hawk-widget" data-widget-type="seasonal" data-render-type="fte">
+</aside><style id="hawkStyles">body .hawk-widget{--trd-blue:#2f6e91;width:100%;letter-spacing:normal;}._hawk.subtitle~.hawk-widget[data-widget-type=price]{margin:16px 0;}@media (min-width:600px){._hawk.subtitle~.hawk-widget[data-widget-type=price]{margin:0;min-height:128px;float:right;clear:none;width:50%;}.fancy_box_body ._hawk.subtitle~.hawk-widget[data-widget-type=price]{float:none;width:100%;}}.icon~.hawk-widget{clear:both;}</style></p><p>With a 93.1% screen-to-body ratio, the pixels now stretch from the small top speaker down to the thin bottom chin, and spill over the curved left and right edges.&nbsp;This is the best looking screen in a smartphone, bar none. Hidden under the glass is an ultrasonic fingerprint sensor on the front, and the new Wireless PowerShare feature on back, allowing you to Qi-charge other devices.</p><p>The back has a triple-lens camera that takes normal, telephoto, and new ultra-wide photos. You can capture more of what's in front of you &ndash; without having to take a few steps back. This isn't the best camera phone next to the Pixel 3, but Samsung offers a fun-to-use, versatile camera.</p><p>We've seen some of these ideas before from Huawei and LG. But the S10 Plus is an amalgam of hallmark features in rival handsets with a dose of first-to-launch aspects like faster Wi-Fi 6 and an HDR10+ screen. It's the best overall package in among big pricey, smartphones.</p><p>Sold? To complicate your buying decision, the <a href="https://www.techradar.com/reviews/samsung-galaxy-s10-5g"><u>Galaxy S10 5G</u></a> is an even bigger and better S10 phone, the <a href="https://www.techradar.com/news/samsung-galaxy-note-10-what-we-want-to-see">Samsung Galaxy Note 10</a> is announced and coming later in August, and after that we're expecting the foldable <a href="https://www.techradar.com/news/samsung-galaxy-fold"><u>Samsung Galaxy Fold</u></a> to finally be released for purchase later in 2019.</p><p>Until those handsets come out, the S10 Plus is best Samsung phone, if you can handle the price and size, and aren&rsquo;t interested in new Galaxy phones on the horizon.</p><p>It has many competitors too though, like the <a href="https://www.techradar.com/reviews/huawei-p30-pro">Huawei P30 Pro</a>, <a href="https://www.techradar.com/reviews/sony-xperia-1-review">Sony Xperia 1</a>, and <a href="https://www.techradar.com/reviews/oneplus-7-pro">OnePlus 7 Pro</a>, all of which have similar specs and identical or lower price tags, so check them out before you commit to the Samsung Galaxy S10.</p><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Samsung Galaxy S10 Plus" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/6okgAKbmDr3nHdkvpggazL-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/6okgAKbmDr3nHdkvpggazL-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/6okgAKbmDr3nHdkvpggazL-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/6okgAKbmDr3nHdkvpggazL.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/6okgAKbmDr3nHdkvpggazL.jpg"></p><figcaption><div class="caption-text"><p>Image credit: TechRadar</p></div></figcaption></figure><h3 class="article-body__section" id="section-price-analysis"><span>Price analysis</span></h3><ul><li><strong>Launched March 8 after a February 20 announcement</strong></li><li><strong>128GB version: </strong>$999 / &pound;899 / AU$1,499</li><li><strong>512GB version: </strong>$1,249 / &pound;1,099 / AU$1,849</li><li><strong>1TB/12GB RAM edition: </strong>$1,599 / &pound;1,399 / AU$2,399</li></ul><div class="fancy-box"><h5>Galaxy S10 Plus specs</h5><div class="fancy_box_body"><p><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class="pinterest-pin-exclude lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/3SWV6M7rxqZDXXgccxNswL-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/3SWV6M7rxqZDXXgccxNswL-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/3SWV6M7rxqZDXXgccxNswL-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/3SWV6M7rxqZDXXgccxNswL.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/3SWV6M7rxqZDXXgccxNswL.jpg" data-pin-nopin="true"></p><p><strong>Weight:</strong> 175g<br>
+<strong>Dimensions:</strong> 157.6 x 74.1 x 7.8mm<br>
+<strong>OS:</strong> Android 9<br>
+<strong>Screen size:</strong> 6.4-inch<br>
+<strong>Resolution:</strong> QHD+<br>
+<strong>CPU:</strong> Octa-core chipset<br>
+<strong>RAM:</strong> 8GB/12GB<br>
+<strong>Storage:</strong> 128/512GB/1TB<br>
+<strong>Battery:</strong> &nbsp;4,100mAh<br>
+<strong>Rear camera:</strong> 16MP + 12MP + 12MP<br>
+<strong>Front camera:</strong> 10MP + 8MP<br>
+<strong>Waterproof: </strong>IP68<br>
+<strong>Headphone jack:</strong> Yes</p></div></div><p>The S10 Plus release date was March 8, and it costs more than its predecessor, the <a href="https://www.techradar.com/reviews/samsung-galaxy-s9-plus-review"><u>S9 Plus</u></a>, although you can now find both phones on sale for a bit cheaper now that we're in the latter half of 2019.</p><p>At launch, it cost $999 / &pound;899 / AU$1,499 for the 128GB of storage model with 8GB of RAM, matching the <a href="https://www.techradar.com/reviews/samsung-galaxy-note-9-review"><u>Note 9</u></a> launch price, and $80 / &pound;30 more than the S9 Plus. The 512GB version with a ceramic back is $1,249 / &pound;1,099 / AU$1,849.</p><p>Samsung's 'Ultimate Performance Edition' variant, only sold on its own site, packs a mammoth 12GB of RAM and 1TB of storage, and has an equally monstrous price tag: $1,599 / &pound;1,399 / AU$2,399.</p><p>While expensive, the S10 Plus with 128GB remains cheaper than its closest rival, the iPhone XS Max. Apple still charges $1,150 / &pound;999 / AU$1,799 for 64GB of storage and no microSD card slot, and its smaller 5.8-inch iPhone XS, also with half the storage and no microSD slot, ties the price of this 128GB 6.4-inch Samsung phone.</p><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Samsung Galaxy S10 Plus" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/wpZFzQdchQkbZp293AvsUM-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/wpZFzQdchQkbZp293AvsUM-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/wpZFzQdchQkbZp293AvsUM-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/wpZFzQdchQkbZp293AvsUM.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/wpZFzQdchQkbZp293AvsUM.jpg"></p><figcaption><div class="caption-text"><p>I spy, with my little eye, a dual 'punch-hole' camera. Image Credit: TechRadar</p></div></figcaption></figure><h3 class="article-body__section" id="section-display"><span>Display</span></h3><ul><li><strong>6.4-inch QHD+ screen with an impressive 93.1% screen-to-body ratio</strong></li><li><strong>Infinity-O display type's punch hole fits two front camera in top right</strong></li><li><strong>First phone with HDR10+, but beware of false touches from lack of bezel</strong></li></ul><p>The 6.4-inch Super AMOLED display on the Samsung Galaxy S10 Plus makes this the biggest S phone screen to date &ndash; bigger than 5.8-inch Galaxy S9 Plus and matching the Note 9 screen size. It's also a lot better.</p><p>The main draw for us is the 93.1% screen-to-body ratio that fits more pixels across a tighter body. Samsung's new Infinity-O display avoids using a notch by opting for a laser-cut hole in the top-right corner for the front camera.</p><p>The hole in this 'punch-hole' display is extra-large, as Samsung dropped in two front cameras to take better portrait selfies than the single-lens Galaxy S10 and S10e front cameras.&nbsp;Good news, we&rsquo;ve not found it too distracting.&nbsp;</p><p>The default resolution is Full HD+, but you can crank it to QHD+ and it's pin sharp, with HDR10+ for superior contrast and color. That's an important perk if you&rsquo;re a movie-watcher on your phone &ndash; an idea which isn&rsquo;t so crazy its size.</p><p>One drawback to Samsung chipping away bezel: we found our encroaching palms making false touches on the sensitive screen (especially when typing), often flipping our on-screen keyboard between letters and numbers to output a bunch of gobbledygook in embarrassing messages. iPhone owners accustomed to more otherwise-ugly bezel and better palm rejection software, beware.</p><p>The Infinity-O display is Samsung's new look for 2019, and it&rsquo;s enough of a change if you've been demanding something new. It looks fantastic, with bright, colorful reproduction making the best of images, icons, apps, games and video.</p><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Samsung Galaxy S10 Plus" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/GfVcKuxbiLEDqzhcP5ojxL-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/GfVcKuxbiLEDqzhcP5ojxL-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/GfVcKuxbiLEDqzhcP5ojxL-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/GfVcKuxbiLEDqzhcP5ojxL.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/GfVcKuxbiLEDqzhcP5ojxL.jpg"></p><figcaption><div class="caption-text"><p>There's a dedicated Bixby button below the volume rocker. (Image Credit: TechRadar)</p></div></figcaption></figure><h3 class="article-body__section" id="section-design"><span>Design</span></h3><ul><li><strong>High-end 512GB/1TB version comes with a premium ceramic back</strong></li><li><strong>Perks: reverse wireless charging (new) and headphone jack (age-old)</strong></li><li><strong>You'll want a case to avoid dropping this big, slippery phone</strong></li></ul><p>The S10 Plus design is full of surprises, new and old. Its aluminum frame is thinner than that of the S9 Plus, and still sandwiched between smooth Gorilla Glass 6. Color choices are &lsquo;Prism&rsquo; white, black and green, while the 512GB and 1TB versions are backed by ceramic in either white or black.</p><p>The back of the Galaxy S10 Plus almost flush, with a triple-lens camera array that has a very subtle bump outlining it, and you won't be able to see the reverse wireless charging module is located below this.</p><p>It's roughly the dimensions of the S9 Plus and feels better in-hand than the physically bigger Note 9, which has a 83.4% screen-to-body ratio.&nbsp;It's surprisingly easy to hold in the hand for a &lsquo;Plus&rsquo;-sized handset, though those with smaller palms will find the glass-and-metal finish offers little in the way of grip. We found ourselves using two hands, especially to type, and suggest a case before walking out of the store with this one.</p><p>On the left side, the volume rocker sits above a dedicated key for Samsung's smart assistant, Bixby. Press this, and you'll launch the assistant, giving you quick access to voice commands and the Bixby Today screen. Unfortunately, it&rsquo;s a little too easy to mistake this AI key for the volume-down button. Good news, Samsung is letting users re-map the undesirable Bixby button this time.</p><p>Samsung remains one of the few phone makers that hasn&rsquo;t ditched the 3.5mm headphone jack, and what&rsquo;s impressive is that it&rsquo;s also trying to sell its wireless Galaxy Buds without axing this venerable feature. It&rsquo;s a show of strength that the company went with a consumer-friendly design choice here.</p><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Samsung Galaxy S10 Plus review" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/NGwnBQKTQrBqbpPiyxH6qE-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/NGwnBQKTQrBqbpPiyxH6qE-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/NGwnBQKTQrBqbpPiyxH6qE-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/NGwnBQKTQrBqbpPiyxH6qE.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/NGwnBQKTQrBqbpPiyxH6qE.jpg"></p><figcaption><div class="caption-text"><p>There's a fingerprint scanner located just about the home button. (Image Credit: TechRadar)</p></div></figcaption></figure><h3 class="article-body__section" id="section-in-screen-fingerprint-sensor"><span>In-screen fingerprint sensor</span></h3><ul><li><strong>In-screen fingerprint sensor is novel and mostly works for us now</strong></li><li><strong>Ultrasonic sensor works better than optical, but requires more pressure</strong></li><li><strong>Still not as fast or as fool-proof as a traditional fingerprint sensor</strong></li></ul><p>The fingerprint sensor is another feature that performs an invisible trick, taking a 3D scan of your print. It's more accurate than the Huawei Mate 20 and<a href="https://www.techradar.com/reviews/oneplus-6t-review"><u> OnePlus 6T</u></a> optical in-screen fingerprint scanners, even when our print was a bit wet. Its downside is a slower speed and the fact that more pressure is required.&nbsp;</p><p>We experienced some failures due it incorrect placement at first, and with no physical ridge to guide our finger we don't expect to eliminate failures completely.&nbsp;In time, we went from a first-time recognition success rate of 80% to a 95% success rate. Some of that was an update and some of it came down to getting used to the invisible sensor location.</p><p>These issues can be mitigated if you opt to also set up face unlock, which we found could recognize us faster than the fingerprint scanner &ndash; the only issue here is that you have to be looking at the S10 Plus to unlock it and it&rsquo;s less secure.</p><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Samsung Galaxy S10 Plus" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/izGaUpa673Hr8d4rXNedwL-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/izGaUpa673Hr8d4rXNedwL-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/izGaUpa673Hr8d4rXNedwL-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/izGaUpa673Hr8d4rXNedwL.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/izGaUpa673Hr8d4rXNedwL.jpg"></p><figcaption><div class="caption-text"><p>The three rear cameras on the Galaxy S10 Plus. Image Credit: TechRadar</p></div></figcaption></figure><h3 class="article-body__section" id="section-camera"><span>Camera</span></h3><ul><li><strong>Triple lens camera for normal, telephoto and ultra-wide photos&nbsp;</strong></li><li><strong>12.3MP main camera takes excellent photos rivaling Pixel 3</strong></li><li><strong>Ultra-wide camera is a great addition, even if it isn't always sharp</strong></li><li><strong>New 'Live Focus' portrait filters like Color Point are fun to use &nbsp;</strong></li></ul><p>The Samsung S10 Plus, like the S10, includes a robust triple-lens rear camera array, comprising a 12MP regular lens, a 12MP optically zoomed telephoto lens, and new 16MP ultra-wide lens.</p><p><strong>12.3MP main camera</strong></p><div class="inlinegallery"><div class="inlinegallery-wrap"><div class="inlinegallery-item"><span class="slidecount">Image 1 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/wgEVzjNimmiLaBEsMHerkP-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/wgEVzjNimmiLaBEsMHerkP-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/wgEVzjNimmiLaBEsMHerkP-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/wgEVzjNimmiLaBEsMHerkP.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/wgEVzjNimmiLaBEsMHerkP.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 2 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/98LH9aVDNDv4PnYTLMjRZ8-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/98LH9aVDNDv4PnYTLMjRZ8-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/98LH9aVDNDv4PnYTLMjRZ8-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/98LH9aVDNDv4PnYTLMjRZ8.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/98LH9aVDNDv4PnYTLMjRZ8.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 3 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/W435jHkENo3Bweht4HBxy8-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/W435jHkENo3Bweht4HBxy8-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/W435jHkENo3Bweht4HBxy8-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/W435jHkENo3Bweht4HBxy8.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/W435jHkENo3Bweht4HBxy8.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 4 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/emzcGtbAtUiEs8z8HJjUo6-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/emzcGtbAtUiEs8z8HJjUo6-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/emzcGtbAtUiEs8z8HJjUo6-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/emzcGtbAtUiEs8z8HJjUo6.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/emzcGtbAtUiEs8z8HJjUo6.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 5 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/jKFWRMputrhmiixB8Vb3a8-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/jKFWRMputrhmiixB8Vb3a8-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/jKFWRMputrhmiixB8Vb3a8-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/jKFWRMputrhmiixB8Vb3a8.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/jKFWRMputrhmiixB8Vb3a8.jpg"></p></figure><p class="slide-description"><br></p></div></div></div><p>Samsung&rsquo;s dual-aperture lens allowed us to capture vibrant-looking photos and even fairly good low-light pictures. The quality isn&rsquo;t always consistent (advice: take lots of the same photo), and it lacks something like the Google Pixel 3's dedicated long-exposure Night Vision mode.</p><p>It ranks among the best camera phones for 2019 because it takes photos with bright, punchy colors. iPhone photos look rather muted compared to the S10 Plus. Side-by-side with the Pixel 3, though, its low-light capabilities are good, but not the best. In particular, it tends to denoise nighttime images, almost smoothing skin people's faces in an effort to reduce low-light graininess.</p><p><strong>16MP ultra-wide camera</strong></p><div class="inlinegallery"><div class="inlinegallery-wrap"><div class="inlinegallery-item"><span class="slidecount">Image 1 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/YfUjvvxtLnrJ3afqogtuSA-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/YfUjvvxtLnrJ3afqogtuSA-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/YfUjvvxtLnrJ3afqogtuSA-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/YfUjvvxtLnrJ3afqogtuSA.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/YfUjvvxtLnrJ3afqogtuSA.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 2 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/8vtxTBGQFzktKCKRUshkD8-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/8vtxTBGQFzktKCKRUshkD8-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/8vtxTBGQFzktKCKRUshkD8-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/8vtxTBGQFzktKCKRUshkD8.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/8vtxTBGQFzktKCKRUshkD8.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 3 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/8dPJPrB8ajrARzyXAgm9E9-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/8dPJPrB8ajrARzyXAgm9E9-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/8dPJPrB8ajrARzyXAgm9E9-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/8dPJPrB8ajrARzyXAgm9E9.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/8dPJPrB8ajrARzyXAgm9E9.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 4 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/UFVQkdYHJyy7mbiV2zFuGA-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/UFVQkdYHJyy7mbiV2zFuGA-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/UFVQkdYHJyy7mbiV2zFuGA-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/UFVQkdYHJyy7mbiV2zFuGA.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/UFVQkdYHJyy7mbiV2zFuGA.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 5 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/MpHrFBBqE8kXgbNndjfWGB-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/MpHrFBBqE8kXgbNndjfWGB-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/MpHrFBBqE8kXgbNndjfWGB-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/MpHrFBBqE8kXgbNndjfWGB.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/MpHrFBBqE8kXgbNndjfWGB.jpg"></p></figure><p class="slide-description"><br></p></div></div></div><p>Samsung's ultra-wide lens does something Google can't do: capture photos with a 123--degree field of view. It&rsquo;s great for cramming more into the frame.</p><p>When you&rsquo;re posing in front of tall buildings and iconic statues, whoever&rsquo;s lucky enough to be taking your picture won&rsquo;t be forced to cross the street in order to do so. Your welcome, kind photo-taking stranger.</p><p>Be warned: the wide angle does have a fisheye effect, distorting people and objects at the edges of shots, appearing stretched compared to those in the middle.&nbsp;This lens is stunning for sweeping landscape photos and group shots in which people are tightly packed into the center of the frame to avoid the barrel-like warping.</p><p><strong>Live Focus portrait photos</strong></p><div class="inlinegallery"><div class="inlinegallery-wrap"><div class="inlinegallery-item"><span class="slidecount">Image 1 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/uR3yWfiLS3zWtsX3f8NduC-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/uR3yWfiLS3zWtsX3f8NduC-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/uR3yWfiLS3zWtsX3f8NduC-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/uR3yWfiLS3zWtsX3f8NduC.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/uR3yWfiLS3zWtsX3f8NduC.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 2 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/ghjkcSp7VC6YVpdvecMi5C-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/ghjkcSp7VC6YVpdvecMi5C-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/ghjkcSp7VC6YVpdvecMi5C-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/ghjkcSp7VC6YVpdvecMi5C.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/ghjkcSp7VC6YVpdvecMi5C.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 3 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/5LFW4GGnB8ypRz5C5zKanB-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/5LFW4GGnB8ypRz5C5zKanB-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/5LFW4GGnB8ypRz5C5zKanB-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/5LFW4GGnB8ypRz5C5zKanB.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/5LFW4GGnB8ypRz5C5zKanB.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 4 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/6QXY7yHZH8B5JiNYmJdYTC-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/6QXY7yHZH8B5JiNYmJdYTC-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/6QXY7yHZH8B5JiNYmJdYTC-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/6QXY7yHZH8B5JiNYmJdYTC.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/6QXY7yHZH8B5JiNYmJdYTC.jpg"></p></figure><p class="slide-description"><br></p></div><div class="inlinegallery-item"><span class="slidecount">Image 5 of 5</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/56NhUbDD5LF7CyGdSyfzSC-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/56NhUbDD5LF7CyGdSyfzSC-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/56NhUbDD5LF7CyGdSyfzSC-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/56NhUbDD5LF7CyGdSyfzSC.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/56NhUbDD5LF7CyGdSyfzSC.jpg"></p></figure><p class="slide-description"><br></p></div></div></div><p>Live Focus is more fun with the Galaxy S10 Plus, with Samsung&rsquo;s portrait mode now offering a few different options. There&rsquo;s still the standard background blur effect &ndash; the amount of which can be easily toggled with an on-screen slide &ndash; but there are now three other options.</p><p>Spin and Zoom offer different blur effects for a more arty shot, but it&rsquo;s the final option, Color Point, which is our favorite. This keeps your subject in the foreground in color, while turning the background black and white.</p><p>It works extremely well, and the results are striking &ndash; and you can also select this option when using the front-facing cameras, for striking selfies that allow you to &lsquo;pop&rsquo; in color while the background is turned mono.</p><p class="mid__article"></p><p><strong>10MP and 8MP front-facing cameras</strong></p><div class="inlinegallery"><div class="inlinegallery-wrap"><div class="inlinegallery-item"><span class="slidecount">Image 1 of 2</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/CnQEm6CHnxm98wqaz5wQT6-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/CnQEm6CHnxm98wqaz5wQT6-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/CnQEm6CHnxm98wqaz5wQT6-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/CnQEm6CHnxm98wqaz5wQT6.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/CnQEm6CHnxm98wqaz5wQT6.jpg"></p></figure></div><div class="inlinegallery-item"><span class="slidecount">Image 2 of 2</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/4AyF9npFpf2uJsqZBKr4j6-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/4AyF9npFpf2uJsqZBKr4j6-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/4AyF9npFpf2uJsqZBKr4j6-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/4AyF9npFpf2uJsqZBKr4j6.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/4AyF9npFpf2uJsqZBKr4j6.jpg"></p></figure></div></div></div><p>The front-facing cameras are 10MP and 8MP, with the latter coming into play for enhancing depth. This allows for better Live Focus portrait photos, and it&rsquo;s exclusive to the S10 Plus variant of Samsung&rsquo;s new phones.&nbsp;</p><p>Images from the front cameras look good in everything but low light, where things become soft-looking as the software attempts to aggressively smooth out the noise, although of course this is an issue that isn't limited to Samsung phones.</p><p>Do you really need a dual-selfie camera? No. The difference in between S10 and S10 Plus selfie quality is minimal. It's the least convincing upgrade, and the ability to take closer and wider zoomed front photos is a software trick not limited to the Plus.</p><p><strong>Camera app</strong></p><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Samsung Galaxy S10 Plus review" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/EshDW8TtjwVFRzddcTujr5-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/EshDW8TtjwVFRzddcTujr5-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/EshDW8TtjwVFRzddcTujr5-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/EshDW8TtjwVFRzddcTujr5.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/EshDW8TtjwVFRzddcTujr5.jpg"></p><figcaption><div class="caption-text"><p>Image Credit: TechRadar</p></div></figcaption></figure><p>Samsung's fully-loaded, yet easy-to-navigate app is where it makes up ground next to Google's more barebones camera app. We love returning features, like being able quickly flip between the main and front cameras by swiping up on the screen &ndash; it's like a big button. Taking a selfie with a gesture is also simple; you open your hand and then form a fist, and it'll start a countdown timer.</p><p>New is Scene Optimizer's 10 additional categories, enabling the AI to tell the difference between a cat and dog, for example, in order to fine-tune image settings. We found it to be smart enough to recognize the main subject in a busy scene, and brighten things up a little as appropriate.</p><p>Shot Suggestions hints at how to fix photos using the phone&rsquo;s neural processing unit (NPU). We found its real-time tips on leveling shots and framing subjects helpful, with an on-screen reticle to properly center group shots. Sure, its suggestions are at times way off, but for the most part it&rsquo;s a helpful addition to the camera UI.&nbsp;</p><p><strong>Video quality</strong></p><div class="youtube-video"><iframe data-lazy-priority="high" data-lazy-src="https://www.youtube.com/embed/3Qf_g0d4NRQ" allowfullscreen></iframe></div><p>Video sees a healthy amount of upgrades in 2019. The S10 Plus offers new Digital Video Stabilization on the rear camera and, for the first time, HDR10+ recording.&nbsp;</p><p>Samsung new stabilization technology is designed to make your Ultra HD video look as smooth as footage from an action cam, and while the handset doesn&rsquo;t have the same durability, it rival the stabilization of the GoPro Hero7 Black. As as close to a gimbal-like experience using only a smartphone, though the tiny DJI Osmo Pocket remains our favorite for silky smooth crane-esque video.</p><p>HDR10+ video recording is a big upgrade because Samsung's prior phones lacked the ability to record support HDR. When turned on, we found HDR10+ kept scenes from overexposing care of additional contrast, but it also turned off saving to the newer HEVC format, which produces smaller file sizes. HDR10+ is tagged with a 'Labs' label, so it seems to be a work in progress.</p><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Samsung Galaxy S10 Plus" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/UrPJ9U89eNhnY7mesi7D3F-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/UrPJ9U89eNhnY7mesi7D3F-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/UrPJ9U89eNhnY7mesi7D3F-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/UrPJ9U89eNhnY7mesi7D3F.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/UrPJ9U89eNhnY7mesi7D3F.jpg"></p><figcaption><div class="caption-text"><p>Image Credit: TechRadar</p></div></figcaption></figure><h3 class="article-body__section" id="section-battery"><span>Battery</span></h3><ul><li><strong>More than all-day battery life with the default Full HD resolution</strong></li><li><strong>The 4,100mAh battery capacity is the largest in a Galaxy S phone</strong></li><li><strong>Samsung's fast charging is slower than rivals, but still beats Apple</strong></li></ul><p>The Samsung Galaxy S10 Plus battery hits a new high for the S series with a 4,100mAh capacity. Last year&rsquo;s S9 Plus was above average for Android flagships, delivering all-day battery life from its 3,500mAh unit, but the S10 Plus performed better for us in our tests.&nbsp;&nbsp;</p><p>Samsung still claims "all-day battery life or a bit more", maybe because of the bigger screen here, or maybe just to play it safe. With moderate use &ndash; a couple of hours of Spotify streaming, a healthy amount of messaging and social media, an hour or two of Netflix and a smattering of gaming &ndash;&nbsp;we found it easy to end the night with an impressive 10% to 30% battery left.</p><p>Start enabling some of the additional features on the Galaxy S10 Plus and the battery will of course take a hit, namely the always-on display &nbsp;and changing Full HD+ to QHD+.</p><p>The Galaxy S10 Plus does come with a host of power saving modes with the most aggressive - maximum power saving - locking down the interface to just a few key apps (of your choosing), ensuring you still get hours from you final few percent.</p><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Samsung Galaxy S10 Plus review" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/YDYHgRs3sjCFEtXt67wqxE-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/YDYHgRs3sjCFEtXt67wqxE-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/YDYHgRs3sjCFEtXt67wqxE-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/YDYHgRs3sjCFEtXt67wqxE.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/YDYHgRs3sjCFEtXt67wqxE.jpg"></p><figcaption><div class="caption-text"><p>Samsung Wireless PowerShare in action. Image Credit: TechRadar</p></div></figcaption></figure><h3 class="article-body__section" id="section-wireless-powershare"><span>Wireless PowerShare</span></h3><ul><li><strong>'Wireless Power Share' makes phone a Qi-charging pad</strong></li><li><strong>It's doesn't charge other devices fast, but can be a lifesaver</strong></li><li><strong>Your friends may like this feature better than you do</strong></li></ul><p>Samsung&rsquo;s new Wireless PowerShare feature turns the back of the S10 Plus into a big Qi charging mat, which is great if you&rsquo;re feeling generous when your friend runs low on battery and feel comfortable sparing some of your hefty 4,1000mAh capacity.&nbsp;</p><p>It worked flawlessly during our tests, enabling us to charge the Galaxy Buds in their case when we placed them on the lower third of the back of the phone.</p><p>Samsung hasn&rsquo;t showed favoritism here either: any Qi charging phone worked in our tests, including the iPhone XS Max. We used this feature more than we thought we might during our time at MWC 2019 &ndash; and we became quite popular.</p><p>Knowing that PowerShare turns off when your phone drops down to 30% battery life is comforting &ndash; as is realizing that your iPhone XS-owning friend has a 2,658mAh capacity for the price of your S10 Plus.</p><p>Reverse wireless charging is found in the <a href="https://www.techradar.com/reviews/huawei-mate-20-pro-review"><u>Huawei Mate 20 Pro</u></a>, but Samsung makes it much easier to access Wireless PowerShare via the quick settings menu in the notification shade, whereas Huawei buries its feature in a forest of settings submenus.</p><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Samsung Galaxy S10 Plus" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/PHVSx4BtDaAN6s8FSbY5kE-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/PHVSx4BtDaAN6s8FSbY5kE-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/PHVSx4BtDaAN6s8FSbY5kE-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/PHVSx4BtDaAN6s8FSbY5kE.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/PHVSx4BtDaAN6s8FSbY5kE.jpg"></p></figure><h3 class="article-body__section" id="section-interface"><span>Interface</span></h3><ul><li><strong>Samsung's One UI interface makes it easy to reach menus on big phones</strong></li><li><strong>Bixby AI is more annoying than it's worth, mostly due to the Bixby button</strong></li><li><strong>We'd like the see Mac/PC Samsung apps for Apple-like 'Continuity'</strong></li><li><strong>Previously this section was 18 paragraphs</strong></li></ul><p>One UI is Android 9 Pie with Samsung's own twist, making it easy to navigate menus by lining options on the bottom half of the screen &ndash; where your thumb can reach. It's well-designed. Gone are the days of Samsung's congested TouchWiz UI; One UI is more lightweight, although still clearly different from stock Android.&nbsp;</p><p>The interface is clean, but it still has a double or even triple doses of the same pre-installed apps from Samsung, Google and Microsoft. And Samsung's won't win us over with Samsung Notes if it doesn't have a desktop edition. Compared to Apple, it lacks robust continuity software to make switching between devices easier.</p><p>We'd like to see Samsung update to Android Q in 2019 instead of taking a year to do so. Our petition to re-map the Bixby key was at least heard. The AI shortcut can now be programmed to launch another app, or run a Bixby quick commands (basically a way to quickly configure settings like Wi-Fi, Bluetooth, screen, brightness, etc).</p><p>Note: the Bixby button recognizes single and double presses, and one of those two must always launch Bixby. Those are the rules of re-mapping. A double click now launches us into our Clash Royale addiction, for example.</p><p>Don't like Bixby at all? &nbsp;The S10 Plus triggers the all-around-better Google Assistant if you long press on the home button.</p><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Samsung Galaxy S10 Plus" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/7mao59JrYKFFHVmMf9Kuzk-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/7mao59JrYKFFHVmMf9Kuzk-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/7mao59JrYKFFHVmMf9Kuzk-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/7mao59JrYKFFHVmMf9Kuzk.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/7mao59JrYKFFHVmMf9Kuzk.jpg"></p></figure><h3 class="article-body__section" id="section-performance"><span>Performance</span></h3><ul><li><strong>The fastest Android phone we've ever tested</strong></li><li><strong>Snapdragon 855 (US version) nearly as fast as iPhone XS</strong></li><li><strong>First to Wi-Fi 6, but requires a Wi-Fi 6 router to get faster speeds</strong></li></ul><p>The Samsung Galaxy S10 Plus is powerful enough to compete with today&rsquo;s best gaming phones, and that means it has top-of-the-line specs inside. In the US, it has ships with Qualcomm&rsquo;s flagship Snapdragon 855 chip, while in most other places around the world it features Samsung&rsquo;s own Exynos 9820 chip.</p><p>Its octacore chips are paired with 8GB of RAM (12GB in the Ultimate Performance Edition) to provide plenty of grunt. In fact, with a Geekbench multi-score of 11,002, it's the fastest Android phone we've ever tested, though the Exynos chip scored a slightly lower 10,385 and the camera app seems a tad slower.</p><p>Samsung comes very close to matching the iPhone XS score of 11,481 &ndash; outright speed has long been one advantage Apple has held over its chief rival. And storage makes the S10 Plus a wholly better value, starting at a healthy 128GB, of which around 110GB is actually available to you out of the box. If that&rsquo;s not enough space, there&rsquo;s a microSD slot which supports cards up to 1TB in size, or the 512GB and 1TB internal storage sizes &ndash; for an additional cost, of course.</p><p>This is the first phone with next-gen Wi-Fi 6, which allows you to seamlessly transition between Wi-Fi routers and is four times faster than the 802.11ax standard. It should deliver a 20% speed boost compared to the S9, although you&rsquo;ll need a new router to get any use out of this feature.</p><h3 class="article-body__section" id="section-who-s-it-for"><span>Who's it for?</span></h3><div class="product"><p><strong>Entertainment seekers<br>
+</strong>The big 6.4-inch screen is the best in the world thanks to its 93.1% screen-to-body ratio and punchy colors. And there's an actual 3.5mm headphone jack. What's not to love?</p></div><div class="product"><p><strong>Selfie takers<br>
+</strong>Although we like the Google Pixel 3 main cameras better, the selfie photos out of the S10 Plus look great in everything but low-light. The Color Point mode makes it so fun to use.&nbsp;</p></div><div class="product"><p><strong>You're a power user<br>
+</strong>Battery is dramatically better on the S10 Plus vs prior Samsung phones. Its 'all-day battery life' plays it safe &ndash; it can go a day and a half and Qi charge other devices via Wireless Power Share.</p></div><h3 class="article-body__section" id="section-who-s-it-not-for"><span>Who's it not for?</span></h3><div class="product"><p><strong>You're on a budget<br>
+</strong>The price is not for the faint of heart, or wallet. Yes, it's cheaper and a better value than the iPhone XS Max, but costs as much as a Note 9. There are phones with better value if the don't need the absolute best.</p></div><div class="product"><p><strong>You tend to drop phones... a lot<br>
+</strong>This is a big and slippery phone made of glass. You're going to want to get a case for it if you're a butterfingers with devices, and maybe even invest in a warranty. Its pricey to replace.</p></div><div class="product"><p><strong>You want the absolute best camera phone<br>
+</strong>This camera is great, but it's not the best. That crown belongs to the Pixel 3. Google's phone isn't as stylish or as feature-packed, so Samsung is a better overall pick, but know there's a better point-and-shoot replacement out there.</p></div><p><em><strong>Not convinced by the Samsung Galaxy S10 Plus? Check out our Comparison Slideshow for alternative to this phone.</strong></em></p><h3 class="article-body__section" id="section-competition"><span>Competition</span></h3><div class="inlinegallery"><div class="inlinegallery-wrap"><div class="inlinegallery-item"><span class="slidecount">Image 1 of 3</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Image credit: TechRadar" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/Q4EuXJLDdx9VtCMXj6Ee27-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/Q4EuXJLDdx9VtCMXj6Ee27-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/Q4EuXJLDdx9VtCMXj6Ee27-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/Q4EuXJLDdx9VtCMXj6Ee27.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/Q4EuXJLDdx9VtCMXj6Ee27.jpg"></p><figcaption><div class="caption-text">Image credit: TechRadar</div></figcaption></figure><h4 class="slide-title">Samsung Galaxy S10</h4><p class="slide-description">If you want all the flagship features of the Galaxy S10 Plus in a more manageable form factor and slightly cheaper price, the Samsung Galaxy S10 is the answer.</p><p class="slide-description">Its smaller 6.1-inch display still packs a QHD+ resolution, although there's just a single punch-hole camera embedded into it.</p><p class="slide-description">You still get the same three rear cameras, Wireless PowerShare feature and in-display fingerprint scanner - plus plenty of power and storage under the hood.<br>
+<br>
+<strong>&bull; Read our</strong> <a href="https://www.techradar.com/reviews/samsung-galaxy-s10"><u>Samsung Galaxy 10 review</u></a></p></div><div class="inlinegallery-item"><span class="slidecount">Image 2 of 3</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Image Credit: TechRadar" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/dXWXZEYRHCEFDE6rNap8MJ-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/dXWXZEYRHCEFDE6rNap8MJ-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/dXWXZEYRHCEFDE6rNap8MJ-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/dXWXZEYRHCEFDE6rNap8MJ.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/dXWXZEYRHCEFDE6rNap8MJ.jpg"></p><figcaption><div class="caption-text">Image Credit: TechRadar</div></figcaption><div class="credit">(Image credit: TechRadar)</div></figure><h4 class="slide-title">Samsung Galaxy S10e</h4><p class="slide-description">For the first time in a number of years Samsung is offering a more affordable version of its S-Series flagship, and the Galaxy S10e is set to go up against Apple's third wheel - the iPhone XR.</p><p class="slide-description">The S10e packs a 5.8-inch Full HD display, two rear cameras and the same powerful chipset at its larger siblings.</p><p class="slide-description">There's no curved edges to the display however, and the fingerprint scanner is located on the side, rather than under the screen.<br>
+<br>
+&bull; <strong>Read our </strong><a href="https://www.techradar.com/reviews/samsung-galaxy-s10/reviews/samsung-galaxy-s10e"><u>Samsung Galaxy 10e review</u></a></p></div><div class="inlinegallery-item"><span class="slidecount">Image 3 of 3</span><figure><p class="bordeaux-image-check"><img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="Image Credit: TechRadar" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/3EVH4udpSxfZJTEF5kr4GW-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/3EVH4udpSxfZJTEF5kr4GW-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/3EVH4udpSxfZJTEF5kr4GW-650-80.jpg 650w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/3EVH4udpSxfZJTEF5kr4GW.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/3EVH4udpSxfZJTEF5kr4GW.jpg"></p><figcaption><div class="caption-text">Image Credit: TechRadar</div></figcaption></figure><h4 class="slide-title">Huawei Mate 20 Pro</h4><p class="slide-description">If it's a big screen, plenty of power and multiple, high-performing rear cameras you're after, the Huawei Mate 20 Pro should be a serious consideration.</p><p class="slide-description">There's a similarly massive 6.39-inch QHD+ display in play here, plus a heap of power under the hood and a trio of versatile cameras on its rear. Plus there's an in-display fingerprint scanner, although its notch is larger than the S10 Plus.</p><p class="slide-description">The real kicker here though is the price. As the Mate 20 Pro is now six months old, its price has dropped and it can now be picked up for much less than the Galaxy S10 Plus.</p><p class="slide-description"><strong>&bull; Read our </strong><a href="https://www.techradar.com/reviews/huawei-mate-20-pro-review"><u>Huawei Mate 20 Pro review</u></a></p></div></div></div>
+</div>
+<div id="this-will-be-used-for-mpu-2"></div>
+<div class="read-more-container"></div>
+</section>
+<script>
+window._taboola = window._taboola || [];
+var taboola_lists = [];
+function taboola_is_device(device) {
+if ((! device) || device === null || (typeof device) === 'undefined') return true
+if (device === 'amp') return false
+if (device === 'desktop' && window.screen.width >= 700) return true
+if (device === 'mobile' && window.screen.width < 700) return true
+return false
+}
+</script>
+<footer class="van_taboola" id="taboola-below-article-thumbnails"></footer>
+<script>
+if (taboola_is_device("desktop")) {
+taboola_lists.push({
+mode: "thumbnails-b",
+container: "taboola-below-article-thumbnails",
+placement: "Below Article Thumbnails",
+target_type: "mix"
+});
+}
+</script>
+<footer class="van_taboola" id="taboola-mobile-below-article-thumbnails"></footer>
+<script>
+if (taboola_is_device("mobile")) {
+taboola_lists.push({
+mode: "thumbnails-a",
+container: "taboola-mobile-below-article-thumbnails",
+placement: "Mobile Below Article Thumbnails",
+target_type: "mix"
+});
+}
+</script>
+<footer class="van_taboola" id=""></footer>
+<script>
+if (taboola_is_device("amp")) {
+taboola_lists.push({
+mode: "thumbnails-a",
+container: "",
+placement: "below-main-column",
+target_type: ""
+});
+}
+</script>
+<script>
+for(var i = 0; i < taboola_lists.length; i++){
+_taboola.push(taboola_lists[i]);
+}
+</script>
+<div class="related-articles-block">
+<div id="expanding-articles"></div> </div>
+<footer id="comment-jump">
+</footer>
+</div>
+</article>
+<aside id="sidebar">
+<section class="box newsletter-signup">
+<h3 class="separator-heading">
+<span>
+<i class="icon icon-envelope white"></i><span class="newsletter-title">Tech deals, prizes and latest news</span>
+</span>
+</h3>
+<div class="grey-box">
+<p>Get the best tech deals, reviews, product advice, competitions, unmissable tech news and more!</p>
+<iframe style="width:100%" height="100" sandbox="allow-scripts allow-forms" data-lazy-src="https://futureplc.slgnt.eu/optiext/optiextension.dll?ID=s6XsWnyjpNGgHmS9IDSe4kGMs9Z0hv5kXjNQUQiRO2tDkDpIITWHetB5caZtol9br5fEOvs9fVr9oPM92i&amp;BRAND=TCR" data-lazy-priority="low">
+</iframe>
+<footer>
+<small>No spam, we promise. You can unsubscribe at any time and we'll never share your details without your permission.</small>
+</footer>
+</div>
+</section>
+<section class="popular-box">
+<div id="popular-box-wrapper" class="style1">
+<div class="most-popular-tab-bar">
+<input type="radio" name="popradio" id="popradio-1" checked>
+<input type="radio" name="popradio" id="popradio-2">
+<div id="popularcontent">
+<div class="flex-row">
+<label class="poplabel" id="poplabel-1" for="popradio-1">
+<span>Most Popular</span>
+</label>
+<label class="poplabel" id="poplabel-2" for="popradio-2">
+<span>Most Shared</span>
+</label>
+</div>
+<ol class="popular-list active" id="poplist-1">
+<li class="most-popular-item first-article">
+<div style="width:100%">
+<a href="https://www.techradar.com/news/audio/portable-audio/10-best-portable-speakers-1069079">
+<img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/ofHmxhQB7aK4PWWgXjSe3N-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/ofHmxhQB7aK4PWWgXjSe3N-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/ofHmxhQB7aK4PWWgXjSe3N-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/ofHmxhQB7aK4PWWgXjSe3N-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/ofHmxhQB7aK4PWWgXjSe3N-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/ofHmxhQB7aK4PWWgXjSe3N.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/ofHmxhQB7aK4PWWgXjSe3N.jpg" data-pin-nopin="true">
+</a>
+<div class="popular-listings">
+<span class="number-1">1</span><h4><a href="https://www.techradar.com/news/audio/portable-audio/10-best-portable-speakers-1069079">Best Bluetooth speakers 2019: the best portable speakers for any budget</a></h4>
+</div>
+</div>
+</li>
+<li class="most-popular-item ">
+<div style="width:100%">
+<a href="https://www.techradar.com/news/iphone-xi">
+<img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia.jpg" data-pin-nopin="true">
+</a>
+<div class="popular-listings">
+<span class="number-2">2</span><h4><a href="https://www.techradar.com/news/iphone-xi">New iPhone 11 release date, price, news and leaks</a></h4>
+</div>
+</div>
+</li>
+<li class="most-popular-item ">
+<div style="width:100%">
+<a href="https://www.techradar.com/news/apple-watch-5-what-we-want-to-see">
+<img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/suPznVUahCoqKGdyx2J2XH-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/suPznVUahCoqKGdyx2J2XH-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/suPznVUahCoqKGdyx2J2XH-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/suPznVUahCoqKGdyx2J2XH-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/suPznVUahCoqKGdyx2J2XH-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/suPznVUahCoqKGdyx2J2XH.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/suPznVUahCoqKGdyx2J2XH.jpg" data-pin-nopin="true">
+</a>
+<div class="popular-listings">
+<span class="number-3">3</span><h4><a href="https://www.techradar.com/news/apple-watch-5-what-we-want-to-see">Apple Watch 5 release date, price, news and rumors</a></h4>
+</div>
+</div>
+</li>
+<li class="most-popular-item ">
+<div style="width:100%">
+<a href="https://www.techradar.com/news/mobile-computing/laptops/best-laptops-1304361">
+<img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ.jpg" data-pin-nopin="true">
+</a>
+<div class="popular-listings">
+<span class="number-4">4</span><h4><a href="https://www.techradar.com/news/mobile-computing/laptops/best-laptops-1304361">The best laptop 2019: our pick of the 15 best laptops you can buy this year</a></h4>
+</div>
+</div>
+</li>
+<li class="most-popular-item ">
+<div style="width:100%">
+<a href="https://www.techradar.com/news/gaming/top-40-best-free-games-you-should-play-today-695473">
+<img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/wAHAqJmwwFP7UZFB6YZEXL-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/wAHAqJmwwFP7UZFB6YZEXL-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/wAHAqJmwwFP7UZFB6YZEXL-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/wAHAqJmwwFP7UZFB6YZEXL-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/wAHAqJmwwFP7UZFB6YZEXL-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/wAHAqJmwwFP7UZFB6YZEXL.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/wAHAqJmwwFP7UZFB6YZEXL.jpg" data-pin-nopin="true">
+</a>
+<div class="popular-listings">
+<span class="number-5">5</span><h4><a href="https://www.techradar.com/news/gaming/top-40-best-free-games-you-should-play-today-695473">Best free games 2019: the top free games to download on PC</a></h4>
+</div>
+</div>
+</li>
+</ol>
+<ol class="popular-list " id="poplist-2">
+<li class="most-popular-item first-article">
+<div style="width:100%">
+<a href="https://www.techradar.com/news/iphone-xi">
+<img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/LoMvW9hgBjKLddxShR6Tia.jpg" data-pin-nopin="true">
+</a>
+<div class="popular-listings">
+<span class="number-1">1</span><h4><a href="https://www.techradar.com/news/iphone-xi">New iPhone 11 release date, price, news and leaks</a></h4>
+</div>
+</div>
+</li>
+<li class="most-popular-item ">
+<div style="width:100%">
+<a href="https://www.techradar.com/news/the-apple-watch-5-tipped-to-come-in-ceramic-and-titanium-versions">
+<img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/3vzE9GbPHSrrCN3b6RGnsi-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/3vzE9GbPHSrrCN3b6RGnsi-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/3vzE9GbPHSrrCN3b6RGnsi-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/3vzE9GbPHSrrCN3b6RGnsi-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/3vzE9GbPHSrrCN3b6RGnsi-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/3vzE9GbPHSrrCN3b6RGnsi.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/3vzE9GbPHSrrCN3b6RGnsi.jpg" data-pin-nopin="true">
+</a>
+<div class="popular-listings">
+<span class="number-2">2</span><h4><a href="https://www.techradar.com/news/the-apple-watch-5-tipped-to-come-in-ceramic-and-titanium-versions">The Apple Watch 5 tipped to come in ceramic and titanium versions</a></h4>
+</div>
+</div>
+</li>
+<li class="most-popular-item ">
+<div style="width:100%">
+<a href="https://www.techradar.com/reviews/samsung-galaxy-note-10">
+<img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/AeRU76G7E4njps2VqRzTN-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/AeRU76G7E4njps2VqRzTN-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/AeRU76G7E4njps2VqRzTN-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/AeRU76G7E4njps2VqRzTN-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/AeRU76G7E4njps2VqRzTN-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/AeRU76G7E4njps2VqRzTN.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/AeRU76G7E4njps2VqRzTN.jpg" data-pin-nopin="true">
+</a>
+<div class="popular-listings">
+<span class="number-3">3</span><h4><a href="https://www.techradar.com/reviews/samsung-galaxy-note-10">Hands on: Samsung Galaxy Note 10 review</a></h4>
+</div>
+</div>
+</li>
+<li class="most-popular-item ">
+<div style="width:100%">
+<a href="https://www.techradar.com/news/why-your-next-tv-should-be-an-lg-oled">
+<img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/ciQ9yLMW9QZ6TfSTkTRcTY-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/ciQ9yLMW9QZ6TfSTkTRcTY-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/ciQ9yLMW9QZ6TfSTkTRcTY-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/ciQ9yLMW9QZ6TfSTkTRcTY-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/ciQ9yLMW9QZ6TfSTkTRcTY-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/ciQ9yLMW9QZ6TfSTkTRcTY.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/ciQ9yLMW9QZ6TfSTkTRcTY.jpg" data-pin-nopin="true">
+</a>
+<div class="popular-listings">
+<span class="number-4">4</span><h4><a href="https://www.techradar.com/news/why-your-next-tv-should-be-an-lg-oled">Why your next TV should be an LG OLED</a></h4>
+</div>
+</div>
+</li>
+<li class="most-popular-item ">
+<div style="width:100%">
+<a href="https://www.techradar.com/news/the-irix-cine-is-an-innovative-lens-that-lets-a-filmmaker-capture-more">
+<img src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/U4JtXDwDN9HgNBvNPEYrGb-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/U4JtXDwDN9HgNBvNPEYrGb-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/U4JtXDwDN9HgNBvNPEYrGb-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/U4JtXDwDN9HgNBvNPEYrGb-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/U4JtXDwDN9HgNBvNPEYrGb-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/U4JtXDwDN9HgNBvNPEYrGb.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/U4JtXDwDN9HgNBvNPEYrGb.jpg" data-pin-nopin="true">
+</a>
+<div class="popular-listings">
+<span class="number-5">5</span><h4><a href="https://www.techradar.com/news/the-irix-cine-is-an-innovative-lens-that-lets-a-filmmaker-capture-more">The Irix Cine is an innovative lens that lets a filmmaker capture more</a></h4>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</aside>
+</div>
+<script id="selligent-tag">
+window.reliablePageLoad.then(function(){
+setTimeout(function(){
+window.wa = document.createElement("script"),
+wa_s = document.getElementsByTagName("script")[0];
+window.wa.src = "https://targetemsecure.blob.core.windows.net/138526d1-8ff9-4de4-b84a-3a11ec020ede/138526d18ff94de4b84a3a11ec020ede_1.js";
+window.wa.type = "text/javascript";
+wa_s.parentNode.insertBefore(wa, wa_s);
+window.wa.bt_queue = [];
+window.wa.afterInit = function(){
+window.wa.bt_queue.push({
+"customIdentifier": "",
+"async": true,
+"isEvent": false,
+"exposedFields": [
+{ "field": "Number_of_hits_in_the_last_day" },
+{ "field": "Average_time__minutes__per_visit" }
+]
+});
+}
+}, 1000);
+});
+</script>
+<script id="hawklinks-script">
+function loadHawklinks(src) {
+!function (e, f, u) {
+e.async = 1;
+e.src = u;
+f.parentNode.insertBefore(e, f);
+}(document.createElement('script'),
+document.getElementsByTagName('script')[0],
+src);
+}
+window.reliableDOMContentLoaded.then(function() {
+loadHawklinks("https://gizmos.hawk-tech.co.uk/hl/hawklinks.js");
+});
+</script>
+<link rel="preload" href="https://gizmos.hawk-tech.co.uk/hl/hawklinks.js" as="script">
+<script type="text/javascript">
+if (!window.amIIE()) {
+var targeting = {};
+var siteTargeting = [];
+for (var attrname in siteTargeting) { targeting[attrname] = siteTargeting[attrname]; }
+var pageTags = "Samsung,Samsung S10 Plus,Samsung Galaxy S10 Plus,S10 Plus,Galaxy S10 Plus,Samsung,Samsung S10 Plus,Samsung Galaxy S10 Plus,S10 Plus,Galaxy S10 Plus,Mobile phones";
+targeting.tags = pageTags;
+window.reliablePageLoad.then(function(){
+(function(){
+/* bootstrap---start */
+var _sp_=function(n){function t(e){if(o[e])return o[e].exports;var r=o[e]={i:e,l:!1,exports:{}};return n[e].call(r.exports,r,r.exports,t),r.l=!0,r.exports}var o={};return t.m=n,t.c=o,t.i=function(n){return n},t.d=function(n,o,e){t.o(n,o)||Object.defineProperty(n,o,{configurable:!1,enumerable:!0,get:e})},t.n=function(n){var o=n&&n.__esModule?function(){return n["default"]}:function(){return n};return t.d(o,"a",o),o},t.o=function(n,t){return Object.prototype.hasOwnProperty.call(n,t)},t.p="",t(t.s=2)}([function(n,t){function o(n,t){e&&console[n].apply(console,["[bootstrap]"].concat(Array.prototype.slice.call(t)))}var e=!1;n.exports={debug:function(){o("debug",arguments)},info:function(){o("info",arguments)},time:function(){o("time",arguments)},warn:function(){o("warn",arguments)},error:function(){o("error",arguments)},useDefaults:function(){e=!0},DEBUG:1}},function(n,t,o){"use strict";function e(){R||(R=!0,D=b.config=b.config||{},s(),F=D.bootstrap&&D.bootstrap.contentControlCallback||D.content_control_callback,q=D.accountId||D.account_id||D.client_id||window.sp_cid,N=D.beacon&&D.beacon.contentControlEndpoint||D.content_control_beacon_endpoint||v.a,D.debug_level&&"OFF"!==D.debug_level.toString().toUpperCase()||D.debug&&D.debug.level&&"OFF"!==D.debug.level.toString().toUpperCase()?j=!0:window.location.search&&null!=window.location.search.match(/_sp_debug_level=(?!off|OFF)/)&&(j=!0),j&&m.useDefaults({defaultLevel:m.DEBUG}))}function r(n,t,e){function r(o,e){var r=new Image;r.src="//"+N+"/cct?v="+encodeURIComponent(v.b)+"&ct="+h+"&cid="+encodeURIComponent(q)+"&l="+encodeURIComponent(n.toString())+"&rc="+encodeURIComponent(t)+"&d0="+encodeURIComponent(i)+(o?"&d1="+encodeURIComponent(o):"")+(null==e?"":"&d2="+encodeURIComponent(e)),g.info("sending beacon: "+r.src),c&&c()}var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"",a=arguments[4],c=arguments[5];if(a){var d=e.lastIndexOf("."),u=e.lastIndexOf("/"),s=-1===d||u>d?e+".png":e.substring(0,d)+".png",l=new Image;l.addEventListener("load",function(){r("1",s)}),l.addEventListener("error",function(){o.i(f.a)(s,function(n,t,o){r("0",s+"::"+o)})}),l.src=s}else r()}function i(n,t,o,e){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},a=arguments.length>5&&void 0!==arguments[5]&&arguments[5],c=function(){i(n,t,o,e,r,!0)};n(t,a?o:c,e,r)}function a(n,t,o,e){function r(o,r){t(o,n,r,e.enableImageLoad)}function i(t,r){o(t,n,r,e.enableImageLoad),e.onError&&e.onError(r)}var a=document.createElement("script");a.src=n,a.onload=function(){e.onLoad&&e.onLoad()},a.onerror=function(){function t(n){return o.indexOf(n)>-1}var o=(navigator.userAgent||navigator.vendor||window.opera).toLowerCase();t("mobi")||t("ipad")||t("android")||t("iphone")?i(L):t("exabot")?i(O):t("bingbot")||t("bingpreview")?i(k):t("googlebot")||t("adsbot-google")||t("mediapartners-google")?i(C):t("googleweblight")?i(E):window.location.host===w?i(x):t("msie 10")||t("msie 9")||t("msie 8")?i(I):c(n,r,i)},document.head.appendChild(a)}function c(n,t,e){o.i(f.a)(n,function(o,r,i,a){(o||r?t:e)(a,n+"::"+i)})}function d(n,t,o,e){if(S)return void u(U+"::"+n,o);r(y,n,t,o,e,function(){if(F){if(j){g.error("bootstrap locking",y,n,t,o,e);debugger}setTimeout(function(){F()},250)}})}function u(n,t,o,e){r(_,n,t,o,e)}function s(){b._networkListenerData||(b._networkListenerData=o.i(p.a)())}function l(n,t){e(),g.info("bootstrap called with",n,t),i(a,n,d,u,t)}Object.defineProperty(t,"__esModule",{value:!0});var f=o(4),p=o(5),v=o(3),g=o(0),m=void 0;m=o(0);var w=["w","e","b","c","a","c","h","e",".","g","o","o","g","l","e","u","s","e","r","c","o","n","t","e","n","t",".","c","o","m"].join(""),b=window._sp_||{},h=1,_=0,y=1,L="m",C="g",x="gw",E="gl",I="i",k="b",O="e",U="n",R=!1,S=!1,j=!1,D=void 0,F=void 0,q=void 0,N=void 0;window.addEventListener("beforeunload",function(){S=!0}),window._sp_=b,b.setupNetworkListeners=s,b.bootstrap=l,window.spBootstrap=l,t["default"]=b},function(n,t,o){o(0);n.exports=o(1)["default"]},function(n,t,o){"use strict";function e(n){return n.join("")}o.d(t,"b",function(){return r}),o.d(t,"a",function(){return i});var r=(o(0),"2.0.1155"),i=(e(["w","w","w",".","s","u","m","m","e","r","h","a","m","s","t","e","r",".","c","o","m"]),e(["w","w","w",".","r","o","o","s","t","e","r","f","i","r","e","w","o","r","k",".","c","o","m"]));e(["/","/","f","s","m","1","0","1","9",".","g","l","o","b","a","l",".","s","s","l",".","f","a","s","t","l","y",".","n","e","t","/","f","s","m","/","d","s"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","1","1","5","5","/","r","e","c","o","v","e","r","y","_","d","f","p","_","i","n","t","e","r","n","a","l","-","v","2",".","0",".","1","1","5","5",".","j","s"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","1","1","5","5","/","r","e","c","o","v","e","r","y","_","l","i","b","_","a","p","i","_","i","f","r","a","m","e","-","v","2",".","0",".","1","1","5","5",".","h","t","m","l"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","1","1","5","5","/","r","e","c","o","v","e","r","y","_","l","i","b","_","r","i","d","_","i","f","r","a","m","e","-","v","2",".","0",".","1","1","5","5",".","h","t","m","l"])},function(n,t,o){"use strict";function e(n,t){function o(n){try{return n&&n.timeStamp?n.timeStamp:window.performance.now()}catch(n){return Date.now()}}var e=arguments.length>2&&void 0!==arguments[2]?arguments[2]:window.location,l=arguments.length>3&&void 0!==arguments[3]?arguments[3]:window.navigator,f=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},p=document.createElement("a");if(p.href=n,"https:"===e.protocol&&p.protocol&&p.protocol!==e.protocol)return r.debug("location.protocol",e.protocol),r.error("protocol mismatch in https environment, standing down"),void t(!1,!1,p.protocol,u);var v=new XMLHttpRequest,g=f.withCredentials;null!=g&&(v.withCredentials=g);try{v.open(f.method||"GET",n)}catch(n){return void t(!0,!1,n.toString(),c,v)}if(null!=f.headers){var m=f.headers;Object.keys(m).forEach(function(n){v.setRequestHeader(n,m[n])})}var w=void 0,b=void 0;v.onloadstart=function(n){w=o(n)},v.onreadystatechange=function(n){if(4===this.readyState){b=o(n)-w;var e=0===this.status&&!1!==l.onLine,r="2"===this.status.toString()[0],c=void 0;return c=r?a:!1===l.onLine?s:i,void t(e,r,this.status+"::"+b,c,v)}};try{v.send(f.body)}catch(n){return void t(!0,!1,n.toString(),d,v)}}t.a=e;var r=o(0),i="n",a="nx",c="xo",d="xs",u="p",s="of"},function(n,t,o){"use strict";function e(){var n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:document,t=[],o=[],e=r.bind(null,t),i=r.bind(null,o);return n.addEventListener("load",e,!0),n.addEventListener("error",i,!0),{load:{events:t,listener:e},error:{events:o,listener:i}}}function r(n,t){if(t.target){var o="string"==typeof t.target.tagName?t.target.tagName.toLowerCase():"",e="string"==typeof t.target.src?t.target.src:"";"iframe"!==o&&n.push({tagName:o,src:e})}}t.a=e;o(0)}]);
+//# sourceMappingURL=https://s3.amazonaws.com/d3jlsadfjkuern/2.0.1155/Ym9vdHN0cmFwLmpz.map
+/* bootstrap---end */
+})();
+(function(){
+(function(){ return (function(){function n(b){window._sp_.config.content_control_callback=function(){p[k("mpdbujpo")][k("isfg")]="//"+b+k("0dd/iunm")};window._sp_.config.enable_rid=!0;window._sp_.config.enable_vid=!0;window._sp_.config.vid_control_callback=function(){console.warn("vid detected")}}function k(b){return b.split("").map(function(a){return q(r.call(a,0)-1)}).join("")}function t(b,a){return"choice"===a?Promise.resolve(b):"off"===a?Promise.resolve(b).then(function(a){return"recovery"===a?"continue-with-adblocker":
+a}):"force"===a?Promise.resolve("recovery"):Promise.reject(Error("Invalid recovery mode: "+a))}function u(){window.pppasoeommmsmzrvbr=new Promise(function(b){window.hiriyyyteetaqgthyu=b})}function v(){window.asdinwawisuihzejsahzl=new Promise(function(b){window.zkckcosdoiaioawqnmzsdqw=b})}function w(b,a){b.then(function(a){a=a.info;0!==(void 0===a.msg_id?0:a.msg_id)&&(l.sendEvent("tiberius","seen",a.msg_desc),window.localStorage.setItem("adblock","disabled"))});Promise.all([b,a]).then(function(a){var b=
+a[0].info;l.sendEvent("tiberius",a[1],0!==(void 0===b.msg_id?0:b.msg_id)?b.msg_desc:"")})}function x(b,a,d){window._sp_.config.mms_domain=b;window._sp_.mms=window._sp_.mms||{};window._sp_.mms.cmd=window._sp_.mms.cmd||[];window._sp_.mms.cmd.push(function(){Object.keys(a).forEach(function(b){window._sp_.mms.setTargeting(b,a[b])});window.vanilla&&window.vanilla.aft?window._sp_.mms.setTargeting("club_loggedin",window.vanilla.aft.logged_in):window._sp_.mms.setTargeting("club_loggedin",!1)});var c=parseInt(h("mock_tiberius_choice")(window),
+10),f=!isNaN(c)&&c in g;b={choice:new Promise(function(a){if(f){var b=g[c]||"choice-"+c,e=parseInt(h("mock_tiberius_choice_timeout")(window),10);isNaN(e)?a(b):window.setTimeout(a,e,b)}else window._sp_.config.mms_choice_selected_callback=function(b){a(g[b]||"choice-"+b)}}),message:new Promise(function(a){function b(a,b){b=void 0===b?0:b;return isNaN(a)?b:a}var c=parseInt(h("mock_tiberius_campaign_id")(window),10),d=parseInt(h("mock_tiberius_message_id")(window),10);isNaN(c)&&isNaN(d)?window._sp_.config.mms_client_data_callback=
+function(b){a(b)}:(c={msgID:b(d),info:{cmpgn_id:b(c),msg_id:b(d)}},d=parseInt(h("mock_tiberius_campaign_timeout")(window),10),isNaN(d)?a(c):window.setTimeout(a,d,c))})};d&&!f&&window._sp_.mms.cmd.push(function(){return window._sp_.mms.startMsg()});return b}function h(b){return function(a){a=a.location.search;var d=void 0;d=void 0===d?"\x26":d;if(""===b)a=!1;else{var c=a.indexOf(b+"\x3d");0<=c?(c=a.indexOf("\x3d",c),d=a.indexOf(d,c+1),a=0<=d?a.substring(c+1,d):a.substring(c+1)):a=!1}return a}}var g=
+{1:"whitelist",2:"recovery",3:"alt-ad",4:"publisher-custom",5:"redirect",6:"continue-with-adblocker"},y=Object.assign||function(b){for(var a=1;a<arguments.length;a++){var d=arguments[a],c;for(c in d)Object.prototype.hasOwnProperty.call(d,c)&&(b[c]=d[c])}return b},l={sendEvent:function(b,a,d){if("undefined"!==typeof window.ga){var c=window.ga,f=window.analytics_ga_data||{};c("set","nonInteraction",!0);c("send",y({},f,{hitType:"event",eventCategory:b,eventAction:a,eventLabel:d}))}}},m=String,q=m.fromCharCode,
+r=m.prototype.charCodeAt,p=window;return function(b,a,d,c,f,k,g,e){window._sp_=window._sp_||{};window._sp_.config=window._sp_.config||{};window._sp_.config.account_id=b;b=void 0===e?"off":e;e=h("force_recovery_mode")(window);e="force"===e||"choice"===e||"off"===e?e:b;b="choice"===e||"force"===e;n(a);c=x(c,g,"force"!==e);a=c.message;c=c.choice;w(a,c);void 0===window.asdinwawisuihzejsahzl&&v();g=window.zkckcosdoiaioawqnmzsdqw;t(c,e).then(g);void 0===window.pppasoeommmsmzrvbr&&u();a.then(window.hiriyyyteetaqgthyu);
+b&&(window._sp_.config.gpt_auto_load=!1,window._sp_.config.publisher_base=k);b?(window._sp_.bootstrap(d+"/media/js/b"+f+"-gb.js"),window._sp_.bootstrap(d+"/media/js/c"+f+"-gb.js")):(window._sp_.bootstrap(d+"/media/js/a"+f+"-gb.js"),window._sp_.bootstrap(d+"/media/js/b"+f+"-gb.js"))}})(); })()(
+200,
+"www.techradar.com",
+"https://www.techradar.com/128169",
+"ttauri.techradar.com",
+"techradar",
+"",
+targeting,
+"off"
+);
+})();
+});
+window.vanilla.tiberius = {
+enabled: true,
+}
+} else {
+window.vanilla.tiberius = {
+enabled: false,
+}
+}
+</script>
+<footer id="document-footer" class="container full">
+<div id="document-footer-content">
+<p>TechRadar is part of Future US Inc, an international media group and leading digital publisher. <a href="http://www.futureus.com" target="_blank">Visit our corporate site</a>.</p>
+<nav>
+<ul>
+<li><a href="https://www.techradar.com/news/about-us" target="_blank">About Us</a></li>
+<li><a href="http://www.futureplc.com/terms-conditions/" target="_blank">Terms and conditions</a></li>
+<li><a href="http://www.futureus.com/privacy-policy/" target="_blank">Privacy policy</a></li>
+<li><a href="http://www.futureplc.com/cookies-policy/" target="_blank">Cookies policy</a></li>
+<li><a href="https://www.techradar.com/advertise-with-us" target="_blank">Advertise with us</a></li>
+<li><a href="https://www.techradar.com/how-to/how-to-turn-off-web-notifications-for-chrome-in-windows-macos-and-android" target="_blank">Web notifications</a></li>
+</ul>
+</nav>
+<p>&copy;
+<span>
+<span>
+<span>Future US, Inc.</span> </span>
+<span>11 West 42nd Street, 15th Floor</span>,
+<span>New York,</span>
+<span class="region">NY</span> <span>10036</span></span>. </p>
+</div>
+</footer>
+<script>
+window.vanL10N = {"GB":{"default":"1","goid":"1071292","name":"Great Britain","region name":"United Kingdom","prompt":"UK","demonymic":"British","language":"en-gb","locale":"en-gb","currency":"GBP","currency symbol":"\u00a3","currency symbol html":"&pound;","layout":"en-gb","url":"\/","public":"1"},"US":{"goid":"1071293","name":"USA","region name":"United States","prompt":"US","demonymic":"American","language":"en-us","locale":"en-us","currency":"USD","currency symbol":"$","currency symbol html":"$","layout":"en-us","url":"\/us","public":"1"},"AU":{"goid":"1098509","name":"Australia","region name":"Australia","prompt":"Australian","demonymic":"Australian","language":"en-au","locale":"en-au","currency":"AUD","currency symbol":"$","currency symbol html":"$","layout":"en-au","url":"\/au","public":"1"},"SG":{"goid":"1098509","name":"Singapore","region name":"Singapore","prompt":"Singaporean","demonymic":"Singaporean","language":"en-sg","locale":"en-sg","currency":"SGD","currency symbol":"$","currency symbol html":"$","layout":"en-sg","url":"\/sg","public":"1"},"ZZ":{"name":"Unknown","region name":"Unknown","demonymic":"Unknown","prompt":"Unknown","language":"en-gb","locale":"en-gb","currency":"GBP","currency symbol":"\u00a3","currency symbol html":"&pound;","layout":"en-gb","url":"\/","public":"1"}};
+</script><script>
+if (document.cookie.indexOf("EuConsent") < 0) {
+if (!window._comscore) {
+window._comscore = window._comscore || [];
+}
+window._comscore.push({
+c1: "2",
+c2: "10055482",
+cs_ucfr: '' });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+} else {
+window.reliableConsentGiven.then(function(value) {
+if (!window._comscore) {
+window._comscore = window._comscore || [];
+}
+var cs_ucfr_value = '';
+if (value.consent && value.consent.purposeConsents[5]) {
+cs_ucfr_value = 1;
+} else {
+cs_ucfr_value = 0;
+}
+window._comscore.push({
+c1: "2",
+c2: "10055482",
+cs_ucfr: cs_ucfr_value });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+});
+}
+</script>
+<script>
+var dfp_config = {
+"keystone": "roadblock",
+"ad_unit": "10518929/tech_techradar/phones/mobile-phones",
+"live_ad_unit": "10518929/tech_techradar/",
+"test_ad_unit": "10518929/tech_techradar_test/",
+"recovery_ad_unit": "",
+"recovery_test_ad_unit": "",
+"incremental": true,
+"gptBeta": "",
+"max_incremental_ads": 20,
+"max_incremental_ads_mobile": 20,
+"max_concurrent_ads": 4,
+"refresh": true,
+"site_platform": "vanilla",
+"tiberius": true,
+"tiberius_mode": "off",
+"keywords": "phone-review,review,awardrecommended,exclude-from-homepage,videoarticle,Mobile phones,Samsung,Samsung S10 Plus,Samsung Galaxy S10 Plus,S10 Plus,Galaxy S10 Plus",
+"article_id": "Ut8b42FiXvQpL2RRa9ARAN",
+"vanilla_article_id": "Ut8b42FiXvQpL2RRa9ARAN",
+"page_type": "review",
+"product_brand": "Samsung",
+"product_category": "Mobile phones",
+"product": "Samsung Galaxy S10 Plus",
+"vertical": "mobile-phones",
+"source": "",
+"provertical": "",
+"single_request": true,
+"onscroll": {
+"refresh" : "",
+"mpu": ""
+},
+"jwplayer": "carousel,article"
+}
+</script> <script>
+dfp_config.gallery_refresh_interval = 2;
+</script> <script>window.vanillaComponents = [{"trackable":[{"type":"click","identifier":".menuitems a","name":"Link clicked","countTotal":true}],"name":"Primary Nav","excludeHidden":false,"identifier":".primary-nav"},{"trackable":[{"type":"click","identifier":".feature-block-item-wrapper a","name":"Article clicked","countTotal":false}],"name":"Featured articles","excludeHidden":false,"identifier":".top-featured"},{"trackable":[{"type":"click","identifier":"a","name":"Logo clicked","countTotal":false}],"name":"Site Logo","identifier":".logo"},{"trackable":[{"type":"click","identifier":".most-popular-item","name":"Most read article clicked","countTotal":true}],"name":"Most Popular - Popular","identifier":"#poplist-1"},{"trackable":[{"type":"click","identifier":".most-popular-item","name":"Most shared article clicked","countTotal":true}],"name":"Most Popular - Shared","identifier":"#poplist-2"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":false}],"name":"Prev/Next","identifier":".next-prev-container"},{"trackable":[{"type":"click","identifier":"a","name":"Number clicked","countTotal":true}],"name":"Paginated Review Numerical pagination - Number","identifier":".pagination-numerical-list"},{"trackable":[{"type":"click","identifier":".prev,.next","name":"Prev/Next clicked","countTotal":false}],"name":"Paginated Review Numerical pagination - Prev/Next","identifier":".navigation-sequential"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Inline Pagination","identifier":".swipe-pages-wrapper"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Article Tags","identifier":"#articleTag"},{"trackable":[{"type":"click","identifier":".recommended-article a","name":"Link clicked","countTotal":true}],"name":"Recommended article","identifier":".recommendation-articles"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Trending bar","identifier":".trending-items"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-1","identifier":".club-boilerplate-1"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-2","identifier":".club-boilerplate-2"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-3","identifier":".club-boilerplate-3"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-4","identifier":".club-boilerplate-4"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Inline links","identifier":"#article-body"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Social links","identifier":".socialite-widget"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Avatar","identifier":"#club-login"},{"trackable":[{"type":"click","identifier":".fwd-link","name":"FWD link clicked","countTotal":true}],"name":"FWD Link","identifier":"div [itemprop='articleBody']"},{"trackable":[{"type":"click","identifier":"div .brands-lead","name":"Extending Trending Bar","countTotal":true}],"name":"Trending Bar Parent","excludeHidden":false,"identifier":"div .trending-bar"}]</script>
+<script>
+var require = {waitSeconds:0};
+</script> <!-- Google Tag Manager -->
+<script>
+(function(){
+function loadGTM(){
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.defer=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KFKJ7S');
+}
+// Can't be in asset loader until we can call custom loader functions
+;(window.Promise
+? Promise.all([
+window.reliablePageLoad,
+window.reliableConsentGiven
+])
+: window.reliableConsentGiven
+).then(function(){
+setTimeout(loadGTM, 1500);
+});
+})();
+</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+(function(){
+if(typeof window._taboola !== 'undefined'
+&& typeof taboola_lists !== 'undefined'
+&& Array.isArray(taboola_lists)
+&& taboola_lists.length)
+{
+function loadTaboola()
+{
+!function (e, f, u) {
+e.async = 1;
+e.src = u;
+f.parentNode.insertBefore(e, f);
+}(document.createElement('script'),
+document.getElementsByTagName('script')[0],
+'//cdn.taboola.com/libtrc/futureplc-network/loader.js');
+_taboola.push({article: 'auto'});
+_taboola.push({flush: true});
+}
+// Can't be in asset loader until we can call custom loader functions
+(window.Promise
+? Promise.all([window.reliablePageLoad, window.reliableConsentGiven])
+: window.reliableConsentGiven
+).then(function(){
+setTimeout(loadTaboola, 6000);
+});
+}
+})();
+</script>
+<script>window.addEventListener("load",function(){if(!window.askForConsent){var e=document.createElement("script");e.src="https://vanilla.futurecdn.net/techradar/cookieconsent.min.js",e.onload=function(){var e=window.innerWidth>=700?"bottom":"top";window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#666666"}},position:e,content:{message:"We use cookies on this website to deliver content to you, personalise content and ads, provide social media features, and analyse our traffic. Click 'I accept' to consent to the use of cookies. More information on cookies and how to manage them",link:"click here",href:"http://www.futureplc.com/cookies-policy/",dismiss:"I accept"}})},document.body.appendChild(e);var o=document.createElement("link");o.rel="stylesheet",o.type="text/css",o.href="https://vanilla.futurecdn.net/techradar/cookieconsent.min.css",document.body.appendChild(o);var t=document.createElement("style");t.appendChild(document.createTextNode(".cc-window {z-index:10000000}")),document.body.appendChild(t)}});</script>
+<!-- document assets - added by the article itself -->
+<script>
+window.vanilla.addJs({"id":"main-js","src":"\/\/vanilla.futurecdn.net\/techradar\/128169\/media\/js\/main.min.js"}, null, 0)
+window.vanilla.addJs({"id":"ffte-js","src":"\/\/vanilla.futurecdn.net\/techradar\/128169\/media\/shared\/js\/app.js"}, 2000, 1)
+window.vanilla.addCss({"href":"https:\/\/vanilla.futurecdn.net\/techradar\/128169\/media\/css\/techradar.min.css"})
+</script> <script>
+window.ffte = {"site":"techradar","endpoint":"\/\/api.vanilla.futurecdn.net\/article","locale":"US","gaCode":"UA-48894329-1","debug":[],"serverEnvironment":"live","regionLink":"","isGlobal":false,"properties":{"articleProduct":["Samsung Galaxy S10 Plus"],"articleProductHandle":["samsung-galaxy-s10-plus"],"articleType":"review","articleTemplate":"review","articleTagHandle":["samsung","samsung-s10-plus","samsung-galaxy-s10-plus","s10-plus","galaxy-s10-plus","samsung","samsung-s10-plus","samsung-galaxy-s10-plus","s10-plus","galaxy-s10-plus","samsung-galaxy-s10-plus","mobile-phones"],"articleTagType":["freeform","freeform","freeform","freeform","freeform","freeform","freeform","freeform","freeform","freeform"],"articleControlTag":["phone-review","review","awardrecommended","exclude-from-homepage","phone-review","review","awardrecommended","exclude-from-homepage","videoarticle"],"articleVerticalHandle":["mobile-phones"],"articleCategoryHandle":["mobile-phones","phone-and-communications","mobile-phones"],"subSite":"","articleVertical":"mobile phones","id":"Ut8b42FiXvQpL2RRa9ARAN","legacyId":"Ut8b42FiXvQpL2RRa9ARAN"}}
+</script>
+<script id="parsely-cfg" src="//cdn.parsely.com/keys/techradar.com/p.js"></script>
+<script>
+window.xkeys = ["techradar-platform-responsive","techradar-core-version-17.2.4","techradar-core-ftefrontprodred","techradar-article-Ut8b42FiXvQpL2RRa9ARAN","techradar-article-regionsetid-LZzvhc5ryE6eg6rs6dnD4V","techradar-articletype-review","techradar-article-age-ancient","techradar-region-US","techradar-language-en","techradar-author-Kd8hmZUAXju22K6yJFBHZW","techradar-author-W8HUNxXbahcvoj4hv9Khdf","techradar-tag-4zxuJ3btaHPisbwUMGF9wE","techradar-tag-4jL4suaGLgqV78tkKWmkcE","techradar-tag-RAb7qfgZzSSiGwPJWDNAUH","techradar-tag-9DDHeS7YBE2TkPrrqS6mdK","techradar-tag-cEtGbSMyqqPrwS2stctUcg","techradar-tag-X6vJnmZRf8MCRLQJBkZzUo","techradar-tag-8ytsJEGr2VewXaxicoBLCE","techradar-vertical-uaf6CevohwWzwnpYAXLx2F"];
+window.templateVariables = {};
+</script>
+</body>
+<script>
+window.ftr_request_id = "";
+</script> </html>
